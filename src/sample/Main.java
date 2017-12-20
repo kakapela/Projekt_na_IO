@@ -23,6 +23,7 @@ public class Main extends Application {
         launch(args);
         Przyklad przyklad=new Przyklad();
         przyklad.execute();
+        //LACZKI
 
     }
 }
