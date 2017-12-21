@@ -20,8 +20,9 @@ import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.sql.SQLException;
 
-public class Controller implements Initializable {
+public class Controller extends Query implements Initializable {
 
 
 
@@ -45,7 +46,6 @@ public class Controller implements Initializable {
 
     @FXML
     private JFXHamburger hamburger;
-
 
     @FXML
     void exitProgram(MouseEvent event) {
@@ -106,5 +106,55 @@ public class Controller implements Initializable {
                 }
             }
         });
+    }
+
+
+
+
+
+    public Controller() {
+        super("SELECT * FROM users WHERE login = ? AND password = ? ");
+
+    }
+    @Override
+    protected void executeSql(String login, String haslo) throws SQLException {
+
+
+
+
+        myStmt=myConn.prepareStatement(sql);
+
+
+
+        myStmt.setString(1,login);//login - docelowo pobieramy tu wartosci wpisane przez usera
+        myStmt.setString(2,haslo);//haslo
+
+        resultSet= myStmt.executeQuery(); //wykonanie zapytania
+    }
+
+    @Override
+    protected void process() throws SQLException {
+        if (resultSet.next()){//  sprawdzamy czy zapytanie zwrocilo cos - jesli tak to znaczy ze jest taki user w bazie, wiec logujemy go
+
+            System.out.println("Zalogowałes sie");
+
+        }
+        else
+        {
+
+            System.out.println("Nie zalogowałes sie");
+
+        }
+
+
+    }
+    public void loguj()
+    {
+        String login1  = login.getText();
+        String haslo1  = haslo.getText();
+        Controller przyklad=new Controller();
+        przyklad.execute(login1,haslo1);
+
+        //System.out.println("jestem");
     }
 }

@@ -25,12 +25,12 @@ abstract public class Query {
 
     }
 
-    public void execute() {
+    public void execute(String login, String haslo) {
         try {
             connectToDatabase();
-            executeSql();
+            executeSql(login,haslo);
             process();
-            close();
+            //close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -40,7 +40,7 @@ abstract public class Query {
         myConn = DriverManager.getConnection(JDBC_URL,USERNAME,PASSWORD);
 
     }
-    abstract protected void executeSql() throws SQLException;
+    abstract protected void executeSql(String login, String haslo) throws SQLException;
 
 
     abstract protected void process() throws SQLException;
