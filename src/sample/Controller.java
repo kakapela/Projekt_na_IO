@@ -51,6 +51,12 @@ public class Controller implements Initializable {
     void exitProgram(MouseEvent event) {
         System.exit(0);
     }
+    public void sprawdz() throws IOException {
+
+        Main.fadeTrans(mainPane);
+        Main.changeScene("loginView.fxml");
+
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
