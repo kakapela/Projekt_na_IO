@@ -75,6 +75,7 @@ public class Controller implements Initializable {
             drawer.setSidePane(box);
         } catch (IOException e) {
             e.printStackTrace();
+
         }
 
 
