@@ -46,7 +46,7 @@
                   <Font size="27.0" />
                </font>
             </Label>
-            <JFXButton layoutX="180.0" layoutY="602.0" prefHeight="52.0" prefWidth="402.0" style="-fx-background-color: #E45652;" text="Załóż konto" textFill="#dad6d6" />
+            <JFXButton fx:id="btn2" layoutX="180.0" layoutY="602.0" onAction="#sprawdz" prefHeight="52.0" prefWidth="402.0" style="-fx-background-color: #E45652;" text="Załóż konto" textFill="#dad6d6" />
             <JFXDrawer fx:id="drawer" defaultDrawerSize="320.0" layoutY="8.0" prefHeight="719.0" prefWidth="320.0" />
          </children>
       </AnchorPane>
@@ -55,6 +55,6 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <JFXHamburger fx:id="hamburger" layoutX="1134.0" layoutY="19.0" prefHeight="36.0" prefWidth="46.0" stylesheets="@style.css" />
+      <JFXHamburger fx:id="hamburger" layoutX="1134.0" layoutY="19.0" opacity="0.0" prefHeight="36.0" prefWidth="46.0" stylesheets="@style.css" />
    </children>
 </AnchorPane>

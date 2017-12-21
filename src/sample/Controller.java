@@ -47,6 +47,8 @@ public class Controller extends Query implements Initializable {
     @FXML
     private JFXHamburger hamburger;
 
+
+
     @FXML
     void exitProgram(MouseEvent event) {
         System.exit(0);
@@ -138,23 +140,30 @@ public class Controller extends Query implements Initializable {
 
             System.out.println("Zalogowałes sie");
 
+
         }
         else
         {
 
             System.out.println("Nie zalogowałes sie");
 
+
         }
 
 
     }
-    public void loguj()
-    {
+    public void loguj() throws IOException {
         String login1  = login.getText();
         String haslo1  = haslo.getText();
         Controller przyklad=new Controller();
         przyklad.execute(login1,haslo1);
 
-        //System.out.println("jestem");
+
+            Main.changeScene("loginView.fxml");
+
+
+    }
+    public void sprawdz() throws IOException {
+        Main.changeScene("loginView.fxml");
     }
 }
