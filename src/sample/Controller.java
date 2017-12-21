@@ -12,10 +12,13 @@ import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -51,9 +54,8 @@ public class Controller implements Initializable {
     void exitProgram(MouseEvent event) {
         System.exit(0);
     }
+Parent root;
     public void sprawdz() throws IOException {
-
-        Main.fadeTrans(mainPane);
         Main.changeScene("loginView.fxml");
 
     }
