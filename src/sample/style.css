@@ -4,3 +4,11 @@
     -fx-background-size: 1024 682;
     -fx-background-position: center center;
 }
+.jfx-hamburger StackPane { -fx-background-color: white; }
+
+.sideMenu{
+    -fx-background-image: url("background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 342 251;
+    -fx-background-position: center center;
+}

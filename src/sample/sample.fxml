@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="719.0" prefWidth="1260.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1260.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <AnchorPane layoutX="765.0" layoutY="95.0" prefHeight="507.0" prefWidth="434.0" style="-fx-background-color: #b22907;">
          <children>
@@ -21,7 +23,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane opacity="0.87" prefHeight="719.0" prefWidth="766.0" styleClass="background" stylesheets="@style.css">
+      <AnchorPane fx:id="anchorPane2" opacity="0.87" prefHeight="719.0" prefWidth="766.0" styleClass="background" stylesheets="@style.css">
          <children>
             <Label layoutX="48.0" layoutY="117.0" text="Algorytmy 1.0 !" textFill="WHITE">
                <font>
@@ -34,12 +36,14 @@
                </font>
             </Label>
             <JFXButton layoutX="58.0" layoutY="391.0" prefHeight="52.0" prefWidth="397.0" style="-fx-background-color: #E45652;" text="Załóż konto" textFill="#dad6d6" />
+            <JFXDrawer fx:id="drawer" defaultDrawerSize="300.0" prefHeight="719.0" prefWidth="345.0" />
          </children>
       </AnchorPane>
-      <Label fx:id="exit" layoutX="1228.0" layoutY="14.0" onMouseClicked="#exitProgram" text="X" textFill="#e4dddd">
+      <Label fx:id="exit" layoutX="1228.0" layoutY="14.0" onMouseClicked="#exitProgram" text="X" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
+      <JFXHamburger fx:id="hamburger" layoutX="1134.0" layoutY="19.0" prefHeight="36.0" prefWidth="46.0" stylesheets="@style.css" />
    </children>
 </AnchorPane>
