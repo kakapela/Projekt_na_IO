@@ -13,9 +13,9 @@
    <children>
       <AnchorPane layoutX="765.0" layoutY="95.0" prefHeight="507.0" prefWidth="434.0" style="-fx-background-color: #b22907;">
          <children>
-            <JFXTextField fx:id="login" focusColor="#20c94a" layoutX="70.0" layoutY="174.0" maxWidth="300.0" minWidth="294.0" prefHeight="43.0" prefWidth="300.0" promptText="username/email" unFocusColor="#d0cbcb" />
-            <JFXPasswordField fx:id="haslo" focusColor="#3cc656" layoutX="70.0" layoutY="273.0" maxWidth="300.0" minWidth="233.0" prefHeight="43.0" prefWidth="300.0" promptText="password"  unFocusColor="#c3b7b7" />
-            <JFXButton layoutX="81.0" layoutY="380.0" prefHeight="52.0" prefWidth="267.0" style="-fx-background-color: #E45652;" text="Zaloguj się" onMouseClicked="#loguj" textFill="#dad6d6" />
+            <JFXTextField fx:id="login" focusColor="#20c94a" labelFloat="true" layoutX="70.0" layoutY="174.0" maxWidth="300.0" minWidth="294.0" prefHeight="43.0" prefWidth="300.0" promptText="username/email" unFocusColor="#d0cbcb" />
+            <JFXPasswordField fx:id="haslo" focusColor="#3cc656" labelFloat="true" layoutX="70.0" layoutY="273.0" maxWidth="300.0" minWidth="233.0" prefHeight="43.0" prefWidth="300.0" promptText="password" unFocusColor="#c3b7b7" />
+            <JFXButton layoutX="81.0" layoutY="380.0" onMouseClicked="#loguj" prefHeight="52.0" prefWidth="267.0" style="-fx-background-color: #E45652;" text="Zaloguj się" textFill="#dad6d6" />
             <Label layoutX="140.0" layoutY="55.0" text="Zaloguj się" textFill="#d0cccc">
                <font>
                   <Font size="29.0" />
@@ -25,18 +25,29 @@
       </AnchorPane>
       <AnchorPane fx:id="anchorPane2" opacity="0.87" prefHeight="719.0" prefWidth="766.0" styleClass="background" stylesheets="@style.css">
          <children>
-            <Label layoutX="48.0" layoutY="117.0" text="Algorytmy 1.0 !" textFill="WHITE">
+            <AnchorPane layoutX="166.0" layoutY="270.0" prefHeight="315.0" prefWidth="434.0" style="-fx-background-color: #b22907;">
+               <children>
+                  <JFXTextField fx:id="login1" focusColor="#20c94a" labelFloat="true" layoutX="70.0" layoutY="127.0" maxWidth="300.0" minWidth="294.0" prefHeight="43.0" prefWidth="300.0" promptText="username/email" unFocusColor="#d0cbcb" />
+                  <JFXPasswordField fx:id="haslo1" focusColor="#3cc656" labelFloat="true" layoutX="70.0" layoutY="233.0" maxWidth="300.0" minWidth="233.0" prefHeight="43.0" prefWidth="300.0" promptText="password" unFocusColor="#c3b7b7" />
+                  <Label layoutX="126.0" layoutY="23.0" text="Nie masz konta?&#10;Załóż je szybko!" textFill="#d0cccc">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="80.0" layoutY="50.0" prefHeight="43.0" prefWidth="289.0" text="Algorytmy 1.0 !" textFill="WHITE">
                <font>
                   <Font size="41.0" />
                </font>
             </Label>
-            <Label layoutX="48.0" layoutY="265.0" prefHeight="102.0" prefWidth="550.0" text="Wszystko co chcesz wiedzieć o algorytmach &#10;teraz w jednym miejscu.." textFill="#fffdfd">
+            <Label layoutX="48.0" layoutY="115.0" prefHeight="102.0" prefWidth="550.0" text="Wszystko co chcesz wiedzieć o algorytmach &#10;teraz w jednym miejscu.." textFill="#fffdfd">
                <font>
                   <Font size="27.0" />
                </font>
             </Label>
-            <JFXButton layoutX="58.0" layoutY="391.0" prefHeight="52.0" prefWidth="397.0" style="-fx-background-color: #E45652;" text="Załóż konto" textFill="#dad6d6" />
-            <JFXDrawer fx:id="drawer" defaultDrawerSize="300.0" prefHeight="719.0" prefWidth="345.0" />
+            <JFXButton layoutX="180.0" layoutY="602.0" prefHeight="52.0" prefWidth="402.0" style="-fx-background-color: #E45652;" text="Załóż konto" textFill="#dad6d6" />
+            <JFXDrawer fx:id="drawer" defaultDrawerSize="320.0" layoutY="8.0" prefHeight="719.0" prefWidth="320.0" />
          </children>
       </AnchorPane>
       <Label fx:id="exit" layoutX="1228.0" layoutY="14.0" onMouseClicked="#exitProgram" text="X" textFill="WHITE">

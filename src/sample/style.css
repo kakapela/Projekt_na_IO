@@ -1,7 +1,7 @@
 .background {
     -fx-background-image: url("background.jpg");
     -fx-background-repeat: stretch;
-    -fx-background-size: 1024 682;
+    -fx-background-size: 1024 719;
     -fx-background-position: center center;
 }
 .jfx-hamburger StackPane { -fx-background-color: white; }
