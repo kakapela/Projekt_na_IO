@@ -8,12 +8,12 @@ import java.sql.*;
 //wzorzec projektowy - metoda szablonowa
 abstract public class Query {
 
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/pytania"; //TUTAJ PODAJESZ PO UKOSNIKU NAZWE BAZY
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/quiz"; //TUTAJ PODAJESZ PO UKOSNIKU NAZWE BAZY
     private static final String USERNAME="root";
     private static final String PASSWORD="";
-    private String sql;
-    private Connection myConn;
-    private Statement myStmt;
+    protected String sql;
+    protected Connection myConn;
+    protected PreparedStatement myStmt;
     protected ResultSet resultSet;
 
     public Query(String sql){
@@ -40,10 +40,9 @@ abstract public class Query {
         myConn = DriverManager.getConnection(JDBC_URL,USERNAME,PASSWORD);
 
     }
-    private void executeSql() throws SQLException {
-        myStmt = myConn.createStatement();
-        resultSet= myStmt.executeQuery(sql);
-    }
+    abstract protected void executeSql() throws SQLException;
+
+
     abstract protected void process() throws SQLException;
 
     private void close() throws SQLException {
