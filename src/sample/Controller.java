@@ -12,14 +12,20 @@ import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+import org.controlsfx.control.Notifications;
 
+import javax.management.NotificationBroadcasterSupport;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -63,12 +69,31 @@ Parent root;
     public void zaloguj() throws IOException {
         try {
             if(loginModel.isLogin(login.getText(),haslo.getText())){
+                Image img=new Image("sample/tick.png");
+                Notifications notificationBuilder = Notifications.create()
+                        .title("Zalogowano się")
+                        .text("Wprowadzone dane są poprawne")
+                        .graphic(new ImageView(img))
+                        .hideAfter(Duration.seconds(5))
+                        .position(Pos.BOTTOM_RIGHT);
+                notificationBuilder.darkStyle();
+                notificationBuilder.show();
 
                 Main.changeScene("loginView.fxml");
 
             }
             else {
-                System.out.println("Nieprawidlowe haslo!");
+                Image img=new Image("sample/symbol_error.png");
+                Notifications notificationBuilder = Notifications.create()
+                        .title("Nieprawidłowe dane!")
+                        .text("Wprowadz ponownie login oraz hasło")
+                        .graphic(new ImageView(img))
+                        .hideAfter(Duration.seconds(5))
+                        .position(Pos.BOTTOM_RIGHT);
+                notificationBuilder.darkStyle();
+                notificationBuilder.show();
+                //notificationBuilder.showError();
+
             }
         } catch (SQLException e) {
             System.out.println("Nieprawidlowe haslo!");
