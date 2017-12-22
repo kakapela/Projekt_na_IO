@@ -6,6 +6,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class loginController implements Initializable {
+
+    LoginModel loginModel=new LoginModel();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
