@@ -22,11 +22,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-
+    LoginModel loginModel=new LoginModel();
 
     @FXML
     private AnchorPane mainPane;
@@ -59,7 +60,23 @@ Parent root;
         Main.changeScene("loginView.fxml");
 
     }
+    public void zaloguj() throws IOException {
+        try {
+            if(loginModel.isLogin(login.getText(),haslo.getText())){
 
+                Main.changeScene("loginView.fxml");
+
+            }
+            else {
+                System.out.println("Nieprawidlowe haslo!");
+            }
+        } catch (SQLException e) {
+            System.out.println("Nieprawidlowe haslo!");
+            e.printStackTrace();
+        }
+
+
+    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

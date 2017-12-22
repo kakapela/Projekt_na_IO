@@ -15,7 +15,7 @@
          <children>
             <JFXTextField fx:id="login" focusColor="#20c94a" layoutX="70.0" layoutY="174.0" maxWidth="300.0" minWidth="294.0" prefHeight="43.0" prefWidth="300.0" promptText="username/email" unFocusColor="#d0cbcb" />
             <JFXPasswordField fx:id="haslo" focusColor="#3cc656" layoutX="70.0" layoutY="273.0" maxWidth="300.0" minWidth="233.0" prefHeight="43.0" prefWidth="300.0" promptText="password" unFocusColor="#c3b7b7" />
-            <JFXButton layoutX="81.0" layoutY="380.0" prefHeight="52.0" prefWidth="267.0" style="-fx-background-color: #E45652;" text="Zaloguj się" textFill="#dad6d6" />
+            <JFXButton layoutX="81.0" layoutY="380.0" onAction="#zaloguj" prefHeight="52.0" prefWidth="267.0" style="-fx-background-color: #E45652;" text="Zaloguj się" textFill="#dad6d6" />
             <Label layoutX="140.0" layoutY="55.0" text="Zaloguj się" textFill="#d0cccc">
                <font>
                   <Font size="29.0" />
