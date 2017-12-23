@@ -64,4 +64,8 @@ public class loginController implements Initializable {
         Main.fadeTrans(mainPane);
         Main.changeScene("ContactView.fxml");
     }
+    public void SQL() throws IOException {
+
+        Main.changeScene("test.fxml");
+    }
 }

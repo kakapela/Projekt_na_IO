@@ -35,7 +35,7 @@
             <OctIconView fill="WHITE" glyphName="ORGANIZATION" size="55" />
          </graphic>
       </JFXButton>
-      <JFXButton contentDisplay="TOP" layoutX="865.0" layoutY="226.0" prefHeight="200.0" prefWidth="285.0" styleClass="pane3" stylesheets="@style.css" text="SQL" textFill="WHITE">
+      <JFXButton contentDisplay="TOP" layoutX="865.0" layoutY="226.0" onAction="#SQL" prefHeight="200.0" prefWidth="285.0" styleClass="pane3" stylesheets="@style.css" text="SQL" textFill="WHITE">
          <graphic>
             <FontAwesomeIconView glyphName="DATABASE" size="55" styleClass="help-icon" />
          </graphic>
