@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1260.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SQL_quizController">
+   <children>
+      <ScrollPane layoutX="-3.0" prefHeight="719.0" prefWidth="1312.0">
+         <content>
+            <AnchorPane prefHeight="1377.0" prefWidth="1304.0" style="-fx-background-color: black;">
+               <children>
+                  <Label layoutX="36.0" layoutY="51.0" prefHeight="80.0" prefWidth="902.0" style="-fx-font-size: 25; -fx-text-fill: white;" text="Jaki symbol oznacza wybranie danych z wszystkich kolumn tabeli?" />
+                  <RadioButton fx:id="ODPA1" layoutX="36.0" layoutY="145.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="\$" />
+                  <RadioButton fx:id="ODPB1" layoutX="36.0" layoutY="200.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="\%" />
+                  <RadioButton fx:id="ODPC1" layoutX="37.0" layoutY="262.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="*" />
+                  <RadioButton fx:id="ODPD1" layoutX="35.0" layoutY="325.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="\@" />
+                  <Label layoutX="41.0" layoutY="422.0" prefHeight="30.0" prefWidth="754.0" style="-fx-font-size: 25; -fx-text-fill: white;" styleClass="whitecolor" stylesheets="@style.css" text="Jakie polecenie służy do dodania rekordu do tabeli?" />
+                  <RadioButton fx:id="ODPA2" layoutX="41.0" layoutY="499.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="ADD INTO" />
+                  <RadioButton fx:id="ODPB2" layoutX="42.0" layoutY="561.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="ADD NEW" />
+                  <RadioButton fx:id="ODPC2" layoutX="42.0" layoutY="623.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="INSERT INTO" />
+                  <RadioButton fx:id="ODPD2" layoutX="43.0" layoutY="678.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="INSERT NEW" />
+                  <Label layoutX="41.0" layoutY="781.0" style="-fx-font-size: 25; -fx-text-fill: white;" text="Które słowo kluczowe gwarantuje nam brak duplikatów w wyniku zapytania?" />
+                  <Label layoutX="41.0" layoutY="41.0" style="-fx-text-fill: white;" text="Pytanie 1/5" />
+                  <Label layoutX="42.0" layoutY="387.0" style="-fx-text-fill: white;" text="Pytanie 2/5" />
+                  <RadioButton fx:id="ODPA3" layoutX="45.0" layoutY="865.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="EXCEPT" />
+                  <RadioButton fx:id="ODPB3" layoutX="45.0" layoutY="924.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="SINGLE" />
+                  <RadioButton fx:id="ODPC3" layoutX="45.0" layoutY="984.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="NO DUPLICATE" />
+                  <RadioButton fx:id="ODPD3" layoutX="45.0" layoutY="1052.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="DISTINCT" />
+                  <Label layoutX="45.0" layoutY="742.0" style="-fx-text-fill: white;" text="Pytanie 3/5" />
+                  <Label layoutX="41.0" layoutY="1113.0" style="-fx-text-fill: white;" text="Pytanie 4/5" />
+                  <Label layoutX="45.0" layoutY="1177.0" style="-fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white;" text="Jaką funkcją można zliczyć ilość wierszy w rezultacie zapytania SQL?" />
+                  <RadioButton fx:id="ODPA4" layoutX="45.0" layoutY="1244.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="COUNT" />
+                  <RadioButton fx:id="ODPB4" layoutX="45.0" layoutY="1302.0" mnemonicParsing="false" style="-fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white;" text="HEIGHT" />
+                  <RadioButton fx:id="ODPC4" layoutX="45.0" layoutY="1364.0" mnemonicParsing="false" style="-fx-text-fill: white; -fx-text-fill: white;" text="LENGTH" />
+                  <RadioButton fx:id="ODPD4" layoutX="45.0" layoutY="1419.0" mnemonicParsing="false" style="-fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white;" text="MAX" />
+                  <RadioButton fx:id="ODPD5" layoutX="54.0" layoutY="1759.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="używając operatora &lt;&gt; NULL" />
+                  <Label layoutX="42.0" layoutY="1484.0" style="-fx-text-fill: white; -fx-text-fill: white;" text="Pytanie 5/5" />
+                  <Label layoutX="54.0" layoutY="1510.0" prefHeight="92.0" prefWidth="1008.0" style="-fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white;" text="Jak sprawdzić w klauzuli WHERE czy dana wartość w kolumnie jest różna od wartości null?" />
+                  <RadioButton fx:id="ODPC5" layoutX="54.0" layoutY="1708.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="używając operatora != NULL" />
+                  <RadioButton fx:id="ODPA5" layoutX="54.0" layoutY="1610.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="nie da się tego sprawdzić" />
+                  <RadioButton fx:id="ODPB5" layoutX="54.0" layoutY="1656.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="używając operator IS NOT NULL" />
+                  <Button fx:id="wyslij" layoutX="1016.0" layoutY="1799.0" mnemonicParsing="false" onAction="#quiz_SQL" prefHeight="65.0" prefWidth="235.0" style="-fx-background-color: #b22907;" text="Zatwierdź" />
+                  <Label fx:id="exit" layoutX="1193.0" layoutY="10.0" onMouseClicked="#exitProgram" prefHeight="45.0" prefWidth="48.0" text="X" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <OctIconView fill="WHITE" glyphName="MAIL_REPLY" layoutX="1097.0" layoutY="36.0" onMouseClicked="#goBackk" size="40" styleClass="buttonGoBack" wrappingWidth="46.911458015441895" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
