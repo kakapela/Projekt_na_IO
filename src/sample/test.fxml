@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.octicons.OctIconView?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
@@ -12,9 +12,8 @@
    <children>
       <ScrollPane layoutX="-3.0" prefHeight="719.0" prefWidth="1312.0">
          <content>
-            <AnchorPane prefHeight="1377.0" prefWidth="1304.0" style="-fx-background-color: black;">
+            <AnchorPane prefHeight="719.0" prefWidth="1260.0" style="-fx-background-color: black;">
                <children>
-                  <Label layoutX="36.0" layoutY="51.0" prefHeight="80.0" prefWidth="902.0" style="-fx-font-size: 25; -fx-text-fill: white;" text="Jaki symbol oznacza wybranie danych z wszystkich kolumn tabeli?" />
                   <RadioButton fx:id="ODPA1" layoutX="36.0" layoutY="145.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="\$" />
                   <RadioButton fx:id="ODPB1" layoutX="36.0" layoutY="200.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="\%" />
                   <RadioButton fx:id="ODPC1" layoutX="37.0" layoutY="262.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="*" />
@@ -44,13 +43,25 @@
                   <RadioButton fx:id="ODPC5" layoutX="54.0" layoutY="1708.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="używając operatora != NULL" />
                   <RadioButton fx:id="ODPA5" layoutX="54.0" layoutY="1610.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="nie da się tego sprawdzić" />
                   <RadioButton fx:id="ODPB5" layoutX="54.0" layoutY="1656.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="używając operator IS NOT NULL" />
-                  <Button fx:id="wyslij" layoutX="1016.0" layoutY="1799.0" mnemonicParsing="false" onAction="#quiz_SQL" prefHeight="65.0" prefWidth="235.0" style="-fx-background-color: #b22907;" text="Zatwierdź" />
-                  <Label fx:id="exit" layoutX="1193.0" layoutY="10.0" onMouseClicked="#exitProgram" prefHeight="45.0" prefWidth="48.0" text="X" textFill="WHITE">
+                  <Label layoutX="36.0" layoutY="51.0" prefHeight="80.0" prefWidth="902.0" style="-fx-font-size: 25; -fx-text-fill: white;" text="Jaki symbol oznacza wybranie danych z wszystkich kolumn tabeli?" />
+                  <JFXButton contentDisplay="CENTER" layoutX="1110.0" onMouseClicked="#goBackk" prefHeight="70.0" prefWidth="82.0" styleClass="buttonGoBack" stylesheets="@style.css" textFill="WHITE">
+                     <graphic>
+                        <OctIconView fill="WHITE" glyphName="MAIL_REPLY" size="40" styleClass="buttonGoBack" />
+                     </graphic>
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton contentDisplay="CENTER" layoutX="1208.0" onMouseClicked="#exitProgram" prefHeight="82.0" prefWidth="82.0" styleClass="exitButton2" stylesheets="@style.css" text="X" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
-                  </Label>
-                  <OctIconView fill="WHITE" glyphName="MAIL_REPLY" layoutX="1097.0" layoutY="36.0" onMouseClicked="#goBackk" size="40" styleClass="buttonGoBack" wrappingWidth="46.911458015441895" />
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="418.0" layoutY="1854.0" onAction="#quiz_SQL" prefHeight="52.0" prefWidth="397.0" styleClass="confirmButton" stylesheets="@style.css" text="Zatwierdź" textFill="#dad6d6">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </JFXButton>
                </children>
             </AnchorPane>
          </content>
