@@ -37,6 +37,8 @@ public class EmailSenderModel {
 
                 mimeMessage.addRecipient(Message.RecipientType.TO,toAddress[i]);
             }
+
+
             mimeMessage.setSubject("Email otrzymany z aplikacji");
             mimeMessage.setText(message);
             Transport transport = session.getTransport("smtp");

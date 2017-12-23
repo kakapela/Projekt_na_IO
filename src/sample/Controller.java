@@ -10,6 +10,7 @@ import com.jfoenix.validation.RequiredFieldValidator;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -22,6 +23,8 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -59,6 +62,13 @@ public class Controller implements Initializable {
 
     @FXML
     private Label exit;
+    @FXML
+    private JFXTextField registrationLogin;
+
+    @FXML
+    private JFXPasswordField registrationPassword;
+
+    RegistrationModel registrationModel=new RegistrationModel();
 
 
     @FXML
@@ -79,6 +89,7 @@ public class Controller implements Initializable {
 
 Parent root;
 
+
     public void zaloguj() throws IOException {
         try {
             if(loginModel.isLogin(login.getText(),haslo.getText())){
@@ -93,6 +104,8 @@ Parent root;
                 notificationBuilder.show();
                 Main.fadeTrans(mainPane);
                 Main.changeScene("loginView.fxml");
+
+
 
             }
             else {
@@ -115,7 +128,38 @@ Parent root;
 
 
     }
-    @Override
+    public void register(){
+
+
+        String registrationLog=registrationLogin.getText();
+        String registrationPass=registrationPassword.getText();
+        if(!(registrationLogin.getText().isEmpty()) && !(registrationPassword.getText().isEmpty())) {
+            registrationModel.register(registrationLog, registrationPass);
+            Image img = new Image("sample/tick.png");
+            Notifications notificationBuilder = Notifications.create()
+                    .title("Zarejstrowałeś się!")
+                    .text("Zaloguj się jak najszybciej!")
+                    .graphic(new ImageView(img))
+                    .hideAfter(Duration.seconds(5))
+                    .position(Pos.BOTTOM_RIGHT);
+            notificationBuilder.darkStyle();
+            notificationBuilder.show();
+
+        }
+        else
+        {
+
+            Image img = new Image("sample/symbol_error.png");
+            Notifications notificationBuilder = Notifications.create()
+                    .title("Niepoprawne dane")
+                    .text("Wpisz poprawnie login oraz hasło")
+                    .graphic(new ImageView(img))
+                    .hideAfter(Duration.seconds(5))
+                    .position(Pos.BOTTOM_RIGHT);
+            notificationBuilder.darkStyle();
+            notificationBuilder.show();
+        }
+    }    @Override
     public void initialize(URL location, ResourceBundle resources) {
 
 

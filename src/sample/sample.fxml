@@ -33,7 +33,7 @@
                   <Font size="27.0" />
                </font>
             </Label>
-            <JFXButton layoutX="116.0" layoutY="553.0" prefHeight="52.0" prefWidth="397.0" styleClass="confirmButton" stylesheets="@style.css" text="Załóż konto" textFill="#dad6d6" />
+            <JFXButton layoutX="116.0" layoutY="553.0" onAction="#register" prefHeight="52.0" prefWidth="397.0" styleClass="confirmButton" stylesheets="@style.css" text="Załóż konto" textFill="#dad6d6" />
             <AnchorPane layoutX="80.0" layoutY="232.0" prefHeight="290.0" prefWidth="468.0" style="-fx-background-color: #b22907;">
                <children>
                   <JFXTextField fx:id="registrationLogin" focusColor="#20c94a" labelFloat="true" layoutX="70.0" layoutY="110.0" maxWidth="300.0" minWidth="294.0" prefHeight="43.0" prefWidth="300.0" promptText="username/email" unFocusColor="#d0cbcb" />
