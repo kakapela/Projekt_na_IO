@@ -1,7 +1,7 @@
 .background {
     -fx-background-image: url("background.jpg");
     -fx-background-repeat: stretch;
-    -fx-background-size: 1024 682;
+    -fx-background-size: 1024 719;
     -fx-background-position: center center;
 }
 .jfx-hamburger StackPane { -fx-background-color: white; }
@@ -12,4 +12,99 @@
     -fx-background-size: 342 251;
     -fx-background-position: center center;
 
+}
+.backIcon{
+    -fx-fill: white;
+}
+.backIcon:hover{
+    -fx-fill: white;
+}
+.buttonGoBack:hover
+{
+    -fx-fill: red;
+    -fx-text-fill: red;
+    -fx-background-color: red;
+}
+.exitButton2:hover{
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-fill: red;
+
+}
+
+.exitButton2{
+
+    -fx-text-fill: white;
+    -fx-fill: white;
+
+}
+.buttonGoBack:hover .backIcon{
+    -fx-fill: red;
+    -fx-text-fill: red;
+    -fx-background-color: red;
+}
+.pane1 {
+
+    -fx-background-color:lime;
+}
+.pane1:hover{
+
+    -fx-background-color:#00dd00;
+}
+.pane2 {
+
+    -fx-background-color:indigo;
+}
+.pane2:hover {
+
+    -fx-background-color: #3a0071;
+}
+.confirmButton{
+    -fx-background-color:  #E45652;
+
+}
+.confirmButton:hover{
+    -fx-background-color:  #D34541;
+
+}
+.exitButton:hover{
+    -fx-text-fill: red;
+}
+.pane3 {
+
+    -fx-background-color:magenta;
+}
+.pane3:hover{
+
+    -fx-background-color:#DD00DD;
+}
+
+.pane4 {
+
+    -fx-background-color:darkorange;
+}
+.pane4:hover{
+
+    -fx-background-color:#DD7D00;
+}
+
+.pane5 {
+
+    -fx-background-color:red;
+}
+.pane5:hover{
+
+    -fx-background-color:#dd0000;
+}
+.pane6 {
+
+    -fx-background-color:#00DDDD;;
+    -fx-text-fill: white;
+}
+.pane6:hover {
+
+    -fx-background-color:#00CCCC;
+}
+.help-icon {
+    -fx-fill: white;
 }

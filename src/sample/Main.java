@@ -24,6 +24,7 @@ public class Main extends Application {
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+
     }
 static Stage stage;
     public static void changeScene(String sceneName) throws IOException {

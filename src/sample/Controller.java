@@ -7,21 +7,27 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
 import com.jfoenix.validation.RequiredFieldValidator;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
 
@@ -33,7 +39,10 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-    LoginModel loginModel=new LoginModel();
+    LoginModel loginModel=LoginModel.getInstance(); //tylko jeden obiekt tego typu
+
+
+
 
     @FXML
     private AnchorPane mainPane;
@@ -47,25 +56,29 @@ public class Controller implements Initializable {
     @FXML
     private AnchorPane anchorPane2;
 
-    @FXML
-    private JFXDrawer drawer;
 
     @FXML
     private Label exit;
 
-    @FXML
-    private JFXHamburger hamburger;
-
 
     @FXML
     void exitProgram(MouseEvent event) {
-        System.exit(0);
-    }
-Parent root;
-    public void sprawdz() throws IOException {
-        Main.changeScene("loginView.fxml");
+        Alert exitAlert = new Alert(Alert.AlertType.CONFIRMATION, "Confirm", ButtonType.OK, ButtonType.CANCEL);
+        Window owner = ((Node) event.getTarget()).getScene().getWindow();
+        exitAlert.setContentText("Czy napewno chcesz wyjść?");
+        exitAlert.initModality(Modality.APPLICATION_MODAL);
+        exitAlert.initOwner(owner);
+        exitAlert.showAndWait();
 
+        if (exitAlert.getResult() == ButtonType.OK) {
+            Platform.exit();
+        } else {
+            exitAlert.close();
+        }
     }
+
+Parent root;
+
     public void zaloguj() throws IOException {
         try {
             if(loginModel.isLogin(login.getText(),haslo.getText())){
@@ -78,7 +91,7 @@ Parent root;
                         .position(Pos.BOTTOM_RIGHT);
                 notificationBuilder.darkStyle();
                 notificationBuilder.show();
-
+                Main.fadeTrans(mainPane);
                 Main.changeScene("loginView.fxml");
 
             }
@@ -106,27 +119,7 @@ Parent root;
     public void initialize(URL location, ResourceBundle resources) {
 
 
-        //hamburger transition
-        HamburgerBackArrowBasicTransition burgerTask2 = new HamburgerBackArrowBasicTransition(hamburger);
-        burgerTask2.setRate(-1);
-        hamburger.addEventHandler(MouseEvent.MOUSE_PRESSED, (e)->{
-            burgerTask2.setRate(burgerTask2.getRate()* -1);
-            burgerTask2.play();
 
-            if(drawer.isShown()){drawer.close();}
-            else {
-                drawer.open();
-            }
-        });
-
-        try {
-
-            VBox box = FXMLLoader.load(getClass().getResource("sideMenu.fxml"));
-            drawer.setSidePane(box);
-        } catch (IOException e) {
-            e.printStackTrace();
-
-        }
 
 
 

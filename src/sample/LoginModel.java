@@ -4,17 +4,32 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+//korzysta ze wzorca SINGLETON
 public class LoginModel  {
+    private static LoginModel INSTANCE;
 
     Connection connection;
-    public LoginModel() {
+    private LoginModel() {
 
         try {
-            connection=MySQLConnection.ConnectingToDB();
+            connection=DBConnection.ConnectingToDB();;
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    public void connect(){
+
+        try {
+            connection=DBConnection.ConnectingToDB();;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static LoginModel getInstance(){
+        if(INSTANCE==null)
+            INSTANCE= new LoginModel();
+        return INSTANCE;
     }
     public boolean isLogin(String user,String password) throws SQLException {
 
@@ -42,4 +57,6 @@ public class LoginModel  {
             resultSet.close();
         }
     }
+
+
 }

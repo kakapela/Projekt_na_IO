@@ -2,15 +2,16 @@ package sample;
 
 import java.sql.*;
 
-public class MySQLConnection {
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/quiz"; //TUTAJ PODAJESZ PO UKOSNIKU NAZWE BAZY
+
+public class DBConnection {
+    private static final String JDBC_URL = "jdbc:sqlite:quiz.db"; //TUTAJ PODAJESZ PO UKOSNIKU NAZWE BAZY
     private static final String USERNAME="root";
     private static final String PASSWORD="";
     Connection myConn;
 
     public static Connection ConnectingToDB() throws SQLException {
         Connection myConn;
-        myConn = DriverManager.getConnection(JDBC_URL,USERNAME,PASSWORD);
+        myConn = DriverManager.getConnection(JDBC_URL);
         return myConn;
     }
 }/*
