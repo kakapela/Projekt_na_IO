@@ -59,6 +59,13 @@ public class Controller implements Initializable {
 
     @FXML
     private Label exit;
+    @FXML
+    private JFXTextField registrationLogin;
+
+    @FXML
+    private JFXPasswordField registrationPassword;
+
+    RegistrationModel registrationModel=new RegistrationModel();
 
 
     @FXML
@@ -115,7 +122,38 @@ Parent root;
 
 
     }
-    @Override
+    public void register(){
+
+
+        String registrationLog=registrationLogin.getText();
+        String registrationPass=registrationPassword.getText();
+        if(!(registrationLogin.getText().isEmpty()) && !(registrationPassword.getText().isEmpty())) {
+            registrationModel.register(registrationLog, registrationPass);
+            Image img = new Image("sample/tick.png");
+            Notifications notificationBuilder = Notifications.create()
+                    .title("Zarejstrowałeś się!")
+                    .text("Zaloguj się jak najszybciej!")
+                    .graphic(new ImageView(img))
+                    .hideAfter(Duration.seconds(5))
+                    .position(Pos.BOTTOM_RIGHT);
+            notificationBuilder.darkStyle();
+            notificationBuilder.show();
+
+        }
+        else
+        {
+            registrationModel.register(registrationLog, registrationPass);
+            Image img = new Image("sample/symbol_error.png");
+            Notifications notificationBuilder = Notifications.create()
+                    .title("Niepoprawne dane")
+                    .text("Wpisz poprawnie login oraz hasło")
+                    .graphic(new ImageView(img))
+                    .hideAfter(Duration.seconds(5))
+                    .position(Pos.BOTTOM_RIGHT);
+            notificationBuilder.darkStyle();
+            notificationBuilder.show();
+        }
+    }    @Override
     public void initialize(URL location, ResourceBundle resources) {
 
 
