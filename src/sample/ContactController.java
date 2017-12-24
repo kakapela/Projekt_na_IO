@@ -32,9 +32,12 @@ public class ContactController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+
         Main.fadeTrans(mainPane);
+
     }
 
+    DBInfoAboutUser currentUser=DBInfoAboutUser.getInstance();
 
 
     @FXML
@@ -67,8 +70,9 @@ public class ContactController implements Initializable {
 
     public void sendMessage(){
         String fullMessage=message.getText();
+        String from="Wiadomosc od uzytkownika o loginie " + currentUser.getCurrentUser()+".\n";
         String[] to = {"javamit@gmail.com","kacperkapela1@wp.pl"};
-        if(EmailSenderModel.sendMail("userOfOurApp@gmail.com","jajeczka18",fullMessage,to)){
+        if(EmailSenderModel.sendMail("userOfOurApp@gmail.com","jajeczka18",from+fullMessage,to)){
             //System.out.println("email sent successfully");
         Image img=new Image("sample/tick.png");
         Notifications notificationBuilder = Notifications.create()

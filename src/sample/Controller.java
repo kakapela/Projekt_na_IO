@@ -43,6 +43,7 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable {
 
     LoginModel loginModel=LoginModel.getInstance(); //tylko jeden obiekt tego typu
+    DBInfoAboutUser currentUser=DBInfoAboutUser.getInstance();
 
 
 
@@ -93,6 +94,8 @@ Parent root;
     public void zaloguj() throws IOException {
         try {
             if(loginModel.isLogin(login.getText(),haslo.getText())){
+
+                currentUser.setUser(login.getText(),haslo.getText());
                 Image img=new Image("sample/tick.png");
                 Notifications notificationBuilder = Notifications.create()
                         .title("Zalogowano się")
