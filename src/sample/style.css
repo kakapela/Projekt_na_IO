@@ -81,11 +81,11 @@
 
 .pane4 {
 
-    -fx-background-color:darkorange;
+    -fx-background-color:	#DA680F;
 }
 .pane4:hover{
 
-    -fx-background-color:#DD7D00;
+    -fx-background-color:#CA570D;
 }
 
 .pane5 {
@@ -98,13 +98,34 @@
 }
 .pane6 {
 
-    -fx-background-color:#00DDDD;;
+    -fx-background-color:#6699CC;
     -fx-text-fill: white;
 }
 .pane6:hover {
 
-    -fx-background-color:#00CCCC;
+    -fx-background-color:#5588BB;
+}
+
+.pane7 {
+    -fx-background-color:#7C1C05	;
+
+}
+.pane7:hover {
+    -fx-background-color: #6B0B04;
 }
 .help-icon {
     -fx-fill: white;
+}
+.pane8 {
+    -fx-background-color: 	#00468C		;
+
+}
+.pane8:hover {
+    -fx-background-color: #00357B;
+}
+.pane9 {
+    -fx-background-color: #2F7532	;
+}
+.pane9:hover {
+    -fx-background-color: #1D6421;
 }

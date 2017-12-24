@@ -59,6 +59,12 @@ public class loginController implements Initializable {
 
 
     }
+
+    public void guide() throws IOException {
+        Main.fadeTrans(mainPane);
+        Main.changeScene("PoradnikView.fxml");
+
+    }
     public void contact() throws IOException {
 
         Main.fadeTrans(mainPane);
