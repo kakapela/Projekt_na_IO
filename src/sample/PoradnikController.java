@@ -29,6 +29,28 @@ public class PoradnikController implements Initializable {
         Main.fadeTrans(mainPane);
         Main.changeScene("JavaView.fxml");
     }
+    @FXML
+    public void gitMovie() throws IOException {
+        Main.fadeTrans(mainPane);
+        Main.changeScene("GitView.fxml");
+    }
+    @FXML
+    public void sqlMovie() throws IOException {
+        Main.fadeTrans(mainPane);
+        Main.changeScene("SqlView.fxml");
+    }
+
+    @FXML
+    public void goToGitSite() throws IOException {
+        Main.fadeTrans(mainPane);
+        Main.changeScene("GitWebView.fxml");
+    }
+    @FXML
+    public void goToSqlSite() throws IOException {
+        Main.fadeTrans(mainPane);
+        Main.changeScene("SqlWebView.fxml");
+    }
+
 
     @FXML
     public void goBackk(){
@@ -46,6 +68,7 @@ public class PoradnikController implements Initializable {
         Main.fadeTrans(mainPane);
         Main.changeScene("JavaWebView.fxml");
     }
+
 
     @FXML
     void exitProgram(MouseEvent event) {
