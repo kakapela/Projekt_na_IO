@@ -35,7 +35,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class JavaController implements Initializable{
+public class JavaController implements Initializable,MediaPlayerFunctions{
 
 
     @FXML
@@ -59,107 +59,40 @@ public class JavaController implements Initializable{
 
     @FXML
     private JFXSlider volumeSlider;
-    boolean isPlaying=false;
+
     @FXML
     private AnchorPane mainPane;
+
+    MediaModel mediaModel=new MediaModel();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Main.fadeTrans(mainPane);
-        String path = new File("src/sample/JavaMovie.mp4").getAbsolutePath() ;
-        me = new Media(new File(path).toURI().toString());
-        mp = new MediaPlayer(me);
-        mv.setMediaPlayer(mp);
-       // mp.setAutoPlay(true);
-        DoubleProperty width= mv.fitWidthProperty();
-        DoubleProperty height= mv.fitHeightProperty();
-        volume_down.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                mp.setVolume(0);
-                volumeSlider.setValue(0);
-                volume_down.setGlyphName("VOLUME_OFF");
-            }
-        });
-        volumeMax.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                mp.setVolume(100);
-                volumeSlider.setValue(100);
-            }
-        });
-        volumeSlider.setValue(mp.getVolume()*100);
-        volumeSlider.valueProperty().addListener(new InvalidationListener() {
-            @Override
-            public void invalidated(Observable observable) {
-                volume_down.setGlyphName("VOLUME_MEDIUM");
-                mp.setVolume(volumeSlider.getValue()/100);
-            }
-        });
-
-        playpause.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                if(isPlaying){
-                    mp.pause();
-                    playpauseIcon.setGlyphName("PLAY");
-                    mp.setRate(1);
-                }
-                else{
-                    mp.play();
-                    playpauseIcon.setGlyphName("PAUSE_CIRCLE");
-                    mp.setRate(1);
-                }
-                isPlaying=!isPlaying;
-            }
-        });
-
-        mp.currentTimeProperty().addListener(new ChangeListener<Duration>() {
-            @Override
-            public void changed(ObservableValue<? extends Duration> observable, Duration oldValue, Duration newValue) {
-                seekSlider.setValue(newValue.toSeconds());
-            }
-        });
-        seekSlider.setValue(0);
-        seekSlider.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                mp.seek(Duration.seconds(seekSlider.getValue()));
-            }
-        });
+        mediaModel.initalizeMovie("src/sample/JavaMovie.mp4",mv);
+        mediaModel.initalizeVolume(volume_down,volumeSlider,volumeMax);
+        mediaModel.initalizePlayPause(playpauseIcon,playpause);
+        mediaModel.initalizeTimeSlider(seekSlider);
 
 
     }
 
-    /*
-    public void play(){
-
-        mp.play();
-        mp.setRate(1);
-
-    }
-*/
-    public void pause(){
-        mp.pause();
-
-    }
 
     public void fast(){
-        mp.setRate(1.25);
+        mediaModel.fast();
 
     }
     public void slow(){
-        mp.setRate(.75);
+        mediaModel.slow();
 
     }
+
+
+
     public void reload(){
-        mp.seek(mp.getStartTime());
-        mp.play();
-        playpauseIcon.setGlyphName("PAUSE_CIRCLE");
+        mediaModel.reload(playpauseIcon);
     }
     public void start(){
-        mp.seek(mp.getStartTime());
-        mp.stop();
-        playpauseIcon.setGlyphName("PLAY");
+        mediaModel.start(playpauseIcon);
 
     }
 
