@@ -18,7 +18,7 @@
                   <RadioButton fx:id="ODPB1" layoutX="36.0" layoutY="200.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="\%" />
                   <RadioButton fx:id="ODPC1" layoutX="37.0" layoutY="262.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="*" />
                   <RadioButton fx:id="ODPD1" layoutX="35.0" layoutY="325.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="\@" />
-                  <Label layoutX="41.0" layoutY="422.0" prefHeight="30.0" prefWidth="754.0" style="-fx-font-size: 25; -fx-text-fill: white;" styleClass="whitecolor" stylesheets="@style.css" text="Jakie polecenie służy do dodania rekordu do tabeli?" />
+                  <Label layoutX="41.0" layoutY="422.0" prefHeight="30.0" prefWidth="754.0" style="-fx-font-size: 25; -fx-text-fill: white;" styleClass="whitecolor" stylesheets="@../style.css" text="Jakie polecenie służy do dodania rekordu do tabeli?" />
                   <RadioButton fx:id="ODPA2" layoutX="41.0" layoutY="499.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="ADD INTO" />
                   <RadioButton fx:id="ODPB2" layoutX="42.0" layoutY="561.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="ADD NEW" />
                   <RadioButton fx:id="ODPC2" layoutX="42.0" layoutY="623.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="INSERT INTO" />
@@ -44,7 +44,7 @@
                   <RadioButton fx:id="ODPA5" layoutX="54.0" layoutY="1610.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="nie da się tego sprawdzić" />
                   <RadioButton fx:id="ODPB5" layoutX="54.0" layoutY="1656.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="używając operator IS NOT NULL" />
                   <Label layoutX="36.0" layoutY="51.0" prefHeight="80.0" prefWidth="902.0" style="-fx-font-size: 25; -fx-text-fill: white;" text="Jaki symbol oznacza wybranie danych z wszystkich kolumn tabeli?" />
-                  <JFXButton contentDisplay="CENTER" layoutX="1110.0" onMouseClicked="#goBackk" prefHeight="70.0" prefWidth="82.0" styleClass="buttonGoBack" stylesheets="@style.css" textFill="WHITE">
+                  <JFXButton contentDisplay="CENTER" layoutX="1110.0" onMouseClicked="#goBackk" prefHeight="70.0" prefWidth="82.0" styleClass="buttonGoBack" stylesheets="@../style.css" textFill="WHITE">
                      <graphic>
                         <OctIconView fill="WHITE" glyphName="MAIL_REPLY" size="40" styleClass="buttonGoBack" />
                      </graphic>
@@ -52,12 +52,12 @@
                         <Font size="39.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton contentDisplay="CENTER" layoutX="1208.0" onMouseClicked="#exitProgram" prefHeight="82.0" prefWidth="82.0" styleClass="exitButton2" stylesheets="@style.css" text="X" textFill="WHITE">
+                  <JFXButton contentDisplay="CENTER" layoutX="1208.0" onMouseClicked="#exitProgram" prefHeight="82.0" prefWidth="82.0" styleClass="exitButton2" stylesheets="@../style.css" text="X" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton buttonType="RAISED" layoutX="418.0" layoutY="1854.0" onAction="#quiz_SQL" prefHeight="52.0" prefWidth="397.0" styleClass="confirmButton" stylesheets="@style.css" text="Zatwierdź" textFill="#dad6d6">
+                  <JFXButton buttonType="RAISED" layoutX="418.0" layoutY="1854.0" onAction="#quiz_SQL" prefHeight="52.0" prefWidth="397.0" styleClass="confirmButton" stylesheets="@../style.css" text="Zatwierdź" textFill="#dad6d6">
                      <font>
                         <Font size="27.0" />
                      </font>

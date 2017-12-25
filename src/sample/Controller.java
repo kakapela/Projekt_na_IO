@@ -1,40 +1,29 @@
 package sample;
 
 
-import com.jfoenix.controls.JFXDrawer;
-import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
 import com.jfoenix.validation.RequiredFieldValidator;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
-import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
 
-import javax.management.NotificationBroadcasterSupport;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -96,7 +85,7 @@ Parent root;
             if(loginModel.isLogin(login.getText(),haslo.getText())){
 
                 currentUser.setUser(login.getText(),haslo.getText());
-                Image img=new Image("sample/tick.png");
+                Image img=new Image("sample/images/tick.png");
                 Notifications notificationBuilder = Notifications.create()
                         .title("Zalogowano się")
                         .text("Wprowadzone dane są poprawne")
@@ -106,13 +95,13 @@ Parent root;
                 notificationBuilder.darkStyle();
                 notificationBuilder.show();
                 Main.fadeTrans(mainPane);
-                Main.changeScene("loginView.fxml");
+                Main.changeScene("View/loginView.fxml");
 
 
 
             }
             else {
-                Image img=new Image("sample/symbol_error.png");
+                Image img=new Image("sample/images/symbol_error.png");
                 Notifications notificationBuilder = Notifications.create()
                         .title("Nieprawidłowe dane!")
                         .text("Wprowadz ponownie login oraz hasło")
@@ -138,7 +127,7 @@ Parent root;
         String registrationPass=registrationPassword.getText();
         if(!(registrationLogin.getText().isEmpty()) && !(registrationPassword.getText().isEmpty())) {
             registrationModel.register(registrationLog, registrationPass);
-            Image img = new Image("sample/tick.png");
+            Image img = new Image("sample/images/tick.png");
             Notifications notificationBuilder = Notifications.create()
                     .title("Zarejstrowałeś się!")
                     .text("Zaloguj się jak najszybciej!")
@@ -152,7 +141,7 @@ Parent root;
         else
         {
 
-            Image img = new Image("sample/symbol_error.png");
+            Image img = new Image("sample/images/symbol_error.png");
             Notifications notificationBuilder = Notifications.create()
                     .title("Niepoprawne dane")
                     .text("Wpisz poprawnie login oraz hasło")

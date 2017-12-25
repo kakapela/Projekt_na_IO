@@ -9,17 +9,17 @@
 
 <AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1260.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.loginController">
    <children>
-      <Label layoutX="1028.0" layoutY="23.0" onMouseClicked="#logout" prefHeight="47.0" prefWidth="170.0" styleClass="exitButton" stylesheets="@style.css" text="Wyloguj się" textFill="#ffebeb">
+      <Label layoutX="1028.0" layoutY="23.0" onMouseClicked="#logout" prefHeight="47.0" prefWidth="170.0" styleClass="exitButton" stylesheets="@../style.css" text="Wyloguj się" textFill="#ffebeb">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <Label layoutX="1220.0" layoutY="24.0" onMouseClicked="#exitProgram" styleClass="exitButton" stylesheets="@style.css" text="X" textFill="WHITE">
+      <Label layoutX="1220.0" layoutY="24.0" onMouseClicked="#exitProgram" styleClass="exitButton" stylesheets="@../style.css" text="X" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <JFXButton contentDisplay="TOP" layoutX="103.0" layoutY="444.0" onAction="#guide" prefHeight="200.0" prefWidth="285.0" styleClass="pane4" stylesheets="@style.css" text="Poradniki" textFill="WHITE">
+      <JFXButton contentDisplay="TOP" layoutX="103.0" layoutY="444.0" onAction="#guide" prefHeight="200.0" prefWidth="285.0" styleClass="pane4" stylesheets="@../style.css" text="Poradniki" textFill="WHITE">
          <font>
             <Font size="39.0" />
          </font>
@@ -27,7 +27,7 @@
             <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="55" />
          </graphic>
       </JFXButton>
-      <JFXButton contentDisplay="TOP" layoutX="103.0" layoutY="196.0" prefHeight="200.0" prefWidth="285.0" styleClass="pane2" stylesheets="@style.css" text="JAVA" textFill="WHITE">
+      <JFXButton contentDisplay="TOP" layoutX="103.0" layoutY="196.0" prefHeight="200.0" prefWidth="285.0" styleClass="pane2" stylesheets="@../style.css" text="JAVA" textFill="WHITE">
          <font>
             <Font size="39.0" />
          </font>
@@ -35,7 +35,7 @@
             <OctIconView fill="WHITE" glyphName="ORGANIZATION" size="55" />
          </graphic>
       </JFXButton>
-      <JFXButton contentDisplay="TOP" layoutX="865.0" layoutY="196.0" onAction="#SQL" prefHeight="200.0" prefWidth="285.0" styleClass="pane3" stylesheets="@style.css" text="SQL" textFill="WHITE">
+      <JFXButton contentDisplay="TOP" layoutX="865.0" layoutY="196.0" onAction="#SQL" prefHeight="200.0" prefWidth="285.0" styleClass="pane3" stylesheets="@../style.css" text="SQL" textFill="WHITE">
          <graphic>
             <FontAwesomeIconView glyphName="DATABASE" size="55" styleClass="help-icon" />
          </graphic>
@@ -43,7 +43,7 @@
             <Font size="39.0" />
          </font>
       </JFXButton>
-      <JFXButton contentDisplay="TOP" layoutX="488.0" layoutY="196.0" prefHeight="200.0" prefWidth="285.0" styleClass="pane9" stylesheets="@style.css" text="GIT" textFill="WHITE">
+      <JFXButton contentDisplay="TOP" layoutX="488.0" layoutY="196.0" prefHeight="200.0" prefWidth="285.0" styleClass="pane9" stylesheets="@../style.css" text="GIT" textFill="WHITE">
          <graphic>
             <FontAwesomeIconView glyphName="GITHUB" size="55" styleClass="help-icon" />
          </graphic>
@@ -51,7 +51,7 @@
             <Font size="39.0" />
          </font>
       </JFXButton>
-      <JFXButton contentDisplay="TOP" layoutX="488.0" layoutY="444.0" onAction="#contact" prefHeight="200.0" prefWidth="285.0" styleClass="pane5" stylesheets="@style.css" text="Kontakt" textFill="WHITE">
+      <JFXButton contentDisplay="TOP" layoutX="488.0" layoutY="444.0" onAction="#contact" prefHeight="200.0" prefWidth="285.0" styleClass="pane5" stylesheets="@../style.css" text="Kontakt" textFill="WHITE">
          <graphic>
             <OctIconView glyphName="COMMENT_DISCUSSION" size="55" styleClass="help-icon" />
          </graphic>
@@ -59,7 +59,7 @@
             <Font size="39.0" />
          </font>
       </JFXButton>
-      <JFXButton contentDisplay="TOP" layoutX="865.0" layoutY="444.0" prefHeight="200.0" prefWidth="285.0" styleClass="pane6" stylesheets="@style.css" text="Pomoc" textFill="WHITE">
+      <JFXButton contentDisplay="TOP" layoutX="865.0" layoutY="444.0" prefHeight="200.0" prefWidth="285.0" styleClass="pane6" stylesheets="@../style.css" text="Pomoc" textFill="WHITE">
          <graphic>
             <FontAwesomeIconView glyphName="QUESTION_CIRCLE" size="55" styleClass="help-icon" />
          </graphic>

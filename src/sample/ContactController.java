@@ -46,7 +46,7 @@ public class ContactController implements Initializable {
 
         try {
             Main.fadeTrans(mainPane);
-            Main.changeScene("loginView.fxml");
+            Main.changeScene("View/loginView.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -74,7 +74,7 @@ public class ContactController implements Initializable {
         String[] to = {"javamit@gmail.com","kacperkapela1@wp.pl"};
         if(EmailSenderModel.sendMail("userOfOurApp@gmail.com","jajeczka18",from+fullMessage,to)){
             //System.out.println("email sent successfully");
-        Image img=new Image("sample/tick.png");
+        Image img=new Image("sample/images/tick.png");
         Notifications notificationBuilder = Notifications.create()
                 .title("Wysyłanie zakończone pomyślnie")
                 .text("Twoja wiadomość została wysłana, dziękujemy!")

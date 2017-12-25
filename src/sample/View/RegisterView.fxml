@@ -13,7 +13,7 @@
          <children>
             <JFXTextField fx:id="login" focusColor="#20c94a" labelFloat="true" layoutX="70.0" layoutY="174.0" maxWidth="300.0" minWidth="294.0" prefHeight="43.0" prefWidth="300.0" promptText="username/email" unFocusColor="#d0cbcb" />
             <JFXPasswordField fx:id="haslo" focusColor="#3cc656" labelFloat="true" layoutX="70.0" layoutY="273.0" maxWidth="300.0" minWidth="233.0" prefHeight="43.0" prefWidth="300.0" promptText="password" unFocusColor="#c3b7b7" />
-            <JFXButton layoutX="81.0" layoutY="380.0" onAction="#zaloguj" prefHeight="52.0" prefWidth="267.0" styleClass="confirmButton" stylesheets="@style.css" text="Zaloguj się" textFill="#dad6d6" />
+            <JFXButton layoutX="81.0" layoutY="380.0" onAction="#zaloguj" prefHeight="52.0" prefWidth="267.0" styleClass="confirmButton" stylesheets="@../style.css" text="Zaloguj się" textFill="#dad6d6" />
             <Label layoutX="140.0" layoutY="55.0" text="Zaloguj się" textFill="#d0cccc">
                <font>
                   <Font size="29.0" />
@@ -21,7 +21,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="anchorPane2" opacity="0.87" prefHeight="719.0" prefWidth="766.0" styleClass="background" stylesheets="@style.css">
+      <AnchorPane fx:id="anchorPane2" opacity="0.87" prefHeight="719.0" prefWidth="766.0" styleClass="background" stylesheets="@../style.css">
          <children>
             <Label layoutX="39.0" layoutY="21.0" text="Quizy IT" textFill="WHITE">
                <font>
@@ -33,7 +33,7 @@
                   <Font size="27.0" />
                </font>
             </Label>
-            <JFXButton layoutX="116.0" layoutY="553.0" onAction="#register" prefHeight="52.0" prefWidth="397.0" styleClass="confirmButton" stylesheets="@style.css" text="Załóż konto" textFill="#dad6d6" />
+            <JFXButton layoutX="116.0" layoutY="553.0" onAction="#register" prefHeight="52.0" prefWidth="397.0" styleClass="confirmButton" stylesheets="@../style.css" text="Załóż konto" textFill="#dad6d6" />
             <AnchorPane layoutX="80.0" layoutY="232.0" prefHeight="290.0" prefWidth="468.0" style="-fx-background-color: #b22907;">
                <children>
                   <JFXTextField fx:id="registrationLogin" focusColor="#20c94a" labelFloat="true" layoutX="70.0" layoutY="110.0" maxWidth="300.0" minWidth="294.0" prefHeight="43.0" prefWidth="300.0" promptText="username/email" unFocusColor="#d0cbcb" />
@@ -47,7 +47,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <Label fx:id="exit" layoutX="1228.0" layoutY="14.0" onMouseClicked="#exitProgram" styleClass="exitButton" stylesheets="@style.css" text="X" textFill="WHITE">
+      <Label fx:id="exit" layoutX="1228.0" layoutY="14.0" onMouseClicked="#exitProgram" styleClass="exitButton" stylesheets="@../style.css" text="X" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font>

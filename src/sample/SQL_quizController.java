@@ -90,7 +90,7 @@ public class SQL_quizController implements Initializable{
 
         try {
             //Main.fadeTrans(mainPane);
-            Main.changeScene("loginView.fxml");
+            Main.changeScene("View/loginView.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -129,7 +129,7 @@ public class SQL_quizController implements Initializable{
 
 
 
-        Image img=new Image("sample/tick.png");
+        Image img=new Image("sample/images/tick.png");
         Notifications notificationBuilder = Notifications.create()
                 .title("Skończyłeś quiz")
                 .text("Liczba punktów: " + punkty)

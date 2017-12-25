@@ -50,7 +50,7 @@ public class loginController implements Initializable {
 
         if (exitAlert.getResult() == ButtonType.OK) {
             Main.fadeTrans(mainPane);
-            Main.changeScene("sample.fxml");
+            Main.changeScene("View/RegisterView.fxml");
         } else {
             exitAlert.close();
         }
@@ -62,16 +62,16 @@ public class loginController implements Initializable {
 
     public void guide() throws IOException {
         Main.fadeTrans(mainPane);
-        Main.changeScene("PoradnikView.fxml");
+        Main.changeScene("View/PoradnikView.fxml");
 
     }
     public void contact() throws IOException {
 
         Main.fadeTrans(mainPane);
-        Main.changeScene("ContactView.fxml");
+        Main.changeScene("View/ContactView.fxml");
     }
     public void SQL() throws IOException {
 
-        Main.changeScene("test.fxml");
+        Main.changeScene("View/SqlQuizView.fxml");
     }
 }

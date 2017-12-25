@@ -56,7 +56,7 @@ public class GitWebController implements Initializable{
 
         try {
             Main.fadeTrans(mainPane);
-            Main.changeScene("PoradnikView.fxml");
+            Main.changeScene("View/PoradnikView.fxml");
 
         } catch (IOException e) {
             e.printStackTrace();

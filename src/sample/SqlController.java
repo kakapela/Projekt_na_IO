@@ -79,7 +79,7 @@ public class SqlController implements Initializable,MediaPlayerFunctions{
 
         try {
             Main.fadeTrans(mainPane);
-            Main.changeScene("PoradnikView.fxml");
+            Main.changeScene("View/PoradnikView.fxml");
             start();
         } catch (IOException e) {
             e.printStackTrace();

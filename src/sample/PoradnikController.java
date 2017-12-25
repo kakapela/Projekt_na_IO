@@ -27,28 +27,28 @@ public class PoradnikController implements Initializable {
     @FXML
     public void javaMovie() throws IOException {
         Main.fadeTrans(mainPane);
-        Main.changeScene("JavaView.fxml");
+        Main.changeScene("View/JavaView.fxml");
     }
     @FXML
     public void gitMovie() throws IOException {
         Main.fadeTrans(mainPane);
-        Main.changeScene("GitView.fxml");
+        Main.changeScene("View/GitView.fxml");
     }
     @FXML
     public void sqlMovie() throws IOException {
         Main.fadeTrans(mainPane);
-        Main.changeScene("SqlView.fxml");
+        Main.changeScene("View/SqlView.fxml");
     }
 
     @FXML
     public void goToGitSite() throws IOException {
         Main.fadeTrans(mainPane);
-        Main.changeScene("GitWebView.fxml");
+        Main.changeScene("View/GitWebView.fxml");
     }
     @FXML
     public void goToSqlSite() throws IOException {
         Main.fadeTrans(mainPane);
-        Main.changeScene("SqlWebView.fxml");
+        Main.changeScene("View/SqlWebView.fxml");
     }
 
 
@@ -58,7 +58,7 @@ public class PoradnikController implements Initializable {
 
         try {
             Main.fadeTrans(mainPane);
-            Main.changeScene("loginView.fxml");
+            Main.changeScene("View/loginView.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -66,7 +66,7 @@ public class PoradnikController implements Initializable {
     @FXML
     public void goToJavaSite() throws IOException {
         Main.fadeTrans(mainPane);
-        Main.changeScene("JavaWebView.fxml");
+        Main.changeScene("View/JavaWebView.fxml");
     }
 
 

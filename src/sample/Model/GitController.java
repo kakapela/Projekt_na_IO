@@ -1,4 +1,4 @@
-package sample;
+package sample.Model;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXSlider;
@@ -16,12 +16,15 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.media.MediaView;
 import javafx.stage.Modality;
 import javafx.stage.Window;
+import sample.Main;
+import sample.MediaModel;
+import sample.MediaPlayerFunctions;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class GitController implements Initializable,MediaPlayerFunctions {
+public class GitController implements Initializable, MediaPlayerFunctions {
 
     @FXML
     private AnchorPane mainPane;
@@ -80,7 +83,7 @@ public class GitController implements Initializable,MediaPlayerFunctions {
 
         try {
             Main.fadeTrans(mainPane);
-            Main.changeScene("PoradnikView.fxml");
+            Main.changeScene("View/PoradnikView.fxml");
             start();
         } catch (IOException e) {
             e.printStackTrace();
