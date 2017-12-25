@@ -12,7 +12,7 @@
    <children>
       <ScrollPane layoutX="-3.0" prefHeight="719.0" prefWidth="1312.0">
          <content>
-            <AnchorPane prefHeight="719.0" prefWidth="1260.0" style="-fx-background-color: black;">
+            <AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1260.0" style="-fx-background-color: black;">
                <children>
                   <RadioButton fx:id="ODPA1" layoutX="36.0" layoutY="145.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="\$" />
                   <RadioButton fx:id="ODPB1" layoutX="36.0" layoutY="200.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="\%" />

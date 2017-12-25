@@ -24,7 +24,7 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <JFXButton contentDisplay="CENTER" layoutX="1097.0" layoutY="6.0" onMouseClicked="#goBackk" prefHeight="70.0" prefWidth="82.0" styleClass="buttonGoBack" stylesheets="@style.css" textFill="WHITE">
+      <JFXButton contentDisplay="CENTER" layoutX="1097.0" layoutY="6.0" onMouseClicked="#goBackk" prefHeight="76.0" prefWidth="82.0" styleClass="buttonGoBack" stylesheets="@style.css" textFill="WHITE">
          <graphic>
             <OctIconView fill="WHITE" glyphName="MAIL_REPLY" onMouseClicked="#goBackk" size="40" styleClass="buttonGoBack" />
          </graphic>
@@ -61,7 +61,7 @@
             <FontAwesomeIconView glyphName="GITHUB" size="55" styleClass="help-icon" />
          </graphic>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="101.0" layoutY="458.0" prefHeight="57.0" prefWidth="285.0" styleClass="pane7" stylesheets="@style.css" text="Strona o JAVIE" textFill="#dad6d6">
+      <JFXButton buttonType="RAISED" layoutX="101.0" layoutY="458.0" onMouseClicked="#goToJavaSite" prefHeight="57.0" prefWidth="285.0" styleClass="pane7" stylesheets="@style.css" text="Strona o JAVIE" textFill="#dad6d6">
          <font>
             <Font size="23.0" />
          </font>

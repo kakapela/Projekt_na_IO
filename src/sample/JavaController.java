@@ -68,7 +68,7 @@ public class JavaController implements Initializable,MediaPlayerFunctions{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Main.fadeTrans(mainPane);
-        mediaModel.initalizeMovie("src/sample/JavaMovie.mp4",mv);
+        mediaModel.initalizeMovie("videos/JavaMovie.mp4",mv);
         mediaModel.initalizeVolume(volume_down,volumeSlider,volumeMax);
         mediaModel.initalizePlayPause(playpauseIcon,playpause);
         mediaModel.initalizeTimeSlider(seekSlider);

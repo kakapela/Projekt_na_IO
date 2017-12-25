@@ -76,11 +76,11 @@
 }
 .pane3 {
 
-    -fx-background-color:magenta;
+    -fx-background-color:#FF1493;
 }
 .pane3:hover{
 
-    -fx-background-color:#DD00DD;
+    -fx-background-color:#DD0382;
 }
 
 .pane4 {
@@ -94,11 +94,11 @@
 
 .pane5 {
 
-    -fx-background-color:red;
+    -fx-background-color:#dd0000;
 }
 .pane5:hover{
 
-    -fx-background-color:#dd0000;
+    -fx-background-color:#cc0000;
 }
 .pane6 {
 

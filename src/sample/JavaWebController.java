@@ -8,6 +8,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Modality;
 import javafx.stage.Window;
 
@@ -15,36 +17,30 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PoradnikController implements Initializable {
-
+public class JavaWebController implements Initializable{
     @FXML
     private AnchorPane mainPane;
 
+    @FXML
+    private WebView webView;
+    private WebEngine engine;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Main.fadeTrans(mainPane);
-    }
-    @FXML
-    public void javaMovie() throws IOException {
-        Main.fadeTrans(mainPane);
-        Main.changeScene("JavaView.fxml");
-    }
+        engine=webView.getEngine();
+        engine.load("https://docs.oracle.com/javase/8/docs/");
 
+    }
     @FXML
     public void goBackk(){
 
 
         try {
             Main.fadeTrans(mainPane);
-            Main.changeScene("loginView.fxml");
+            Main.changeScene("PoradnikView.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-    @FXML
-    public void goToJavaSite() throws IOException {
-        Main.fadeTrans(mainPane);
-        Main.changeScene("JavaWebView.fxml");
     }
 
     @FXML
@@ -61,5 +57,8 @@ public class PoradnikController implements Initializable {
         } else {
             exitAlert.close();
         }
+    }
+    public void reloadPage(){
+        engine.load("https://docs.oracle.com/javase/8/docs/");
     }
 }

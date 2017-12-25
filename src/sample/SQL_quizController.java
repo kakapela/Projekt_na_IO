@@ -22,6 +22,9 @@ import java.util.ResourceBundle;
 public class SQL_quizController implements Initializable{
 
     @FXML
+    private AnchorPane mainPane;
+
+    @FXML
     private RadioButton ODPA1;
     @FXML
     private RadioButton ODPA2;
@@ -151,6 +154,7 @@ public class SQL_quizController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources){
 
+            Main.fadeTrans(mainPane);
         final ToggleGroup pytanie1 = new ToggleGroup();
         final ToggleGroup pytanie2 = new ToggleGroup();
         final ToggleGroup pytanie3 = new ToggleGroup();
