@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1260.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.JavaWebController">
+<AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1260.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.JavaWebController">
    <children>
       <JFXButton contentDisplay="CENTER" layoutX="1189.0" onMouseClicked="#exitProgram" prefHeight="70.0" prefWidth="82.0" styleClass="exitButton2" stylesheets="@../style.css" text="X" textFill="WHITE">
          <font>

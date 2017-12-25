@@ -1,4 +1,4 @@
-package sample;
+package sample.Controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXSlider;
@@ -16,12 +16,16 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.media.MediaView;
 import javafx.stage.Modality;
 import javafx.stage.Window;
+import sample.Main;
+import sample.Model.MediaModel;
+import sample.Model.MediaPlayerFunctions;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SqlController implements Initializable,MediaPlayerFunctions{
+public class GitController implements Initializable, MediaPlayerFunctions {
+
     @FXML
     private AnchorPane mainPane;
 
@@ -53,7 +57,7 @@ public class SqlController implements Initializable,MediaPlayerFunctions{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Main.fadeTrans(mainPane);
-        mediaModel.initalizeMovie("videos/SqlTutorial.mp4",mv);
+        mediaModel.initalizeMovie("videos/GitTutorial.mp4",mv);
         mediaModel.initalizeVolume(volume_down,volumeSlider,volumeMax);
         mediaModel.initalizePlayPause(playpauseIcon,playpause);
         mediaModel.initalizeTimeSlider(seekSlider);
@@ -93,7 +97,7 @@ public class SqlController implements Initializable,MediaPlayerFunctions{
 
     @Override
     public void slow() {
-        mediaModel.slow();
+    mediaModel.slow();
     }
 
     @Override
@@ -103,6 +107,6 @@ public class SqlController implements Initializable,MediaPlayerFunctions{
 
     @Override
     public void start() {
-    mediaModel.start(playpauseIcon);
+        mediaModel.start(playpauseIcon);
     }
 }

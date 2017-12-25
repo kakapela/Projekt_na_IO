@@ -1,4 +1,4 @@
-package sample.Model;
+package sample.Controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXSlider;
@@ -13,55 +13,81 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.stage.Modality;
 import javafx.stage.Window;
 import sample.Main;
-import sample.MediaModel;
-import sample.MediaPlayerFunctions;
+import sample.Model.MediaModel;
+import sample.Model.MediaPlayerFunctions;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class GitController implements Initializable, MediaPlayerFunctions {
+public class JavaController implements Initializable,MediaPlayerFunctions {
+
 
     @FXML
-    private AnchorPane mainPane;
+    private MediaView mv;
+    private MediaPlayer mp;
+    private Media me;
 
     @FXML
-    private JFXButton playpause;
-
+    private StackPane videoPane;
+    @FXML
+    private MaterialDesignIconView volume_down;
     @FXML
     private FontAwesomeIconView playpauseIcon;
+    @FXML
+    private JFXButton playpause;
+    @FXML
+    private FontAwesomeIconView volumeMax;
+    @FXML
+    private JFXSlider seekSlider;
+
 
     @FXML
     private JFXSlider volumeSlider;
 
     @FXML
-    private FontAwesomeIconView volumeMax;
+    private AnchorPane mainPane;
 
-    @FXML
-    private MaterialDesignIconView volume_down;
-
-    @FXML
-    private StackPane videoPane;
-
-    @FXML
-    private MediaView mv;
-
-    @FXML
-    private JFXSlider seekSlider;
-    MediaModel mediaModel= new MediaModel();
+    MediaModel mediaModel=new MediaModel();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Main.fadeTrans(mainPane);
-        mediaModel.initalizeMovie("videos/GitTutorial.mp4",mv);
+        mediaModel.initalizeMovie("videos/JavaMovie.mp4",mv);
         mediaModel.initalizeVolume(volume_down,volumeSlider,volumeMax);
         mediaModel.initalizePlayPause(playpauseIcon,playpause);
         mediaModel.initalizeTimeSlider(seekSlider);
+
+
     }
+
+
+    public void fast(){
+        mediaModel.fast();
+
+    }
+    public void slow(){
+        mediaModel.slow();
+
+    }
+
+
+
+    public void reload(){
+        mediaModel.reload(playpauseIcon);
+    }
+    public void start(){
+        mediaModel.start(playpauseIcon);
+
+    }
+
+
     @FXML
     void exitProgram(MouseEvent event) {
         Alert exitAlert = new Alert(Alert.AlertType.CONFIRMATION, "Confirm", ButtonType.OK, ButtonType.CANCEL);
@@ -90,23 +116,5 @@ public class GitController implements Initializable, MediaPlayerFunctions {
         }
     }
 
-    @Override
-    public void fast() {
-        mediaModel.fast();
-    }
 
-    @Override
-    public void slow() {
-    mediaModel.slow();
-    }
-
-    @Override
-    public void reload() {
-    mediaModel.reload(playpauseIcon);
-    }
-
-    @Override
-    public void start() {
-        mediaModel.start(playpauseIcon);
-    }
 }

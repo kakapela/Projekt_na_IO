@@ -1,4 +1,4 @@
-package sample;
+package sample.Controller;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -8,67 +8,44 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Modality;
 import javafx.stage.Window;
+import sample.Main;
+import sample.Model.WebViewModel;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PoradnikController implements Initializable {
-
+public class JavaWebController implements Initializable{
     @FXML
     private AnchorPane mainPane;
+    private String url_adress="https://docs.oracle.com/javase/8/docs/";
 
+
+    @FXML
+    private WebView webView;
+    private WebEngine engine;
+    WebViewModel webViewModel=new WebViewModel();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Main.fadeTrans(mainPane);
-    }
-    @FXML
-    public void javaMovie() throws IOException {
-        Main.fadeTrans(mainPane);
-        Main.changeScene("View/JavaView.fxml");
-    }
-    @FXML
-    public void gitMovie() throws IOException {
-        Main.fadeTrans(mainPane);
-        Main.changeScene("View/GitView.fxml");
-    }
-    @FXML
-    public void sqlMovie() throws IOException {
-        Main.fadeTrans(mainPane);
-        Main.changeScene("View/SqlView.fxml");
-    }
+        webViewModel.initalize(engine,webView,url_adress);
 
-    @FXML
-    public void goToGitSite() throws IOException {
-        Main.fadeTrans(mainPane);
-        Main.changeScene("View/GitWebView.fxml");
     }
-    @FXML
-    public void goToSqlSite() throws IOException {
-        Main.fadeTrans(mainPane);
-        Main.changeScene("View/SqlWebView.fxml");
-    }
-
-
     @FXML
     public void goBackk(){
 
 
         try {
             Main.fadeTrans(mainPane);
-            Main.changeScene("View/loginView.fxml");
+            Main.changeScene("View/PoradnikView.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    @FXML
-    public void goToJavaSite() throws IOException {
-        Main.fadeTrans(mainPane);
-        Main.changeScene("View/JavaWebView.fxml");
-    }
-
 
     @FXML
     void exitProgram(MouseEvent event) {
@@ -84,5 +61,8 @@ public class PoradnikController implements Initializable {
         } else {
             exitAlert.close();
         }
+    }
+    public void reloadPage(){
+        webViewModel.reload();
     }
 }

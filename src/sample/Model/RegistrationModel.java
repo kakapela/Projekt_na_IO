@@ -1,16 +1,15 @@
-package sample;
+package sample.Model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class RegistrationModel {
     Connection connection;
    public RegistrationModel() {
 
         try {
-            connection=DBConnection.ConnectingToDB();;
+            connection= DBConnection.ConnectingToDB();;
         } catch (SQLException e) {
             e.printStackTrace();
         }

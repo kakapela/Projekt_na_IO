@@ -1,4 +1,4 @@
-package sample;
+package sample.Model;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 

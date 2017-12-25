@@ -1,4 +1,4 @@
-package sample;
+package sample.Model;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXSlider;

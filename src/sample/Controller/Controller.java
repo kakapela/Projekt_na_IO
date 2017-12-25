@@ -1,4 +1,4 @@
-package sample;
+package sample.Controller;
 
 
 import com.jfoenix.controls.JFXPasswordField;
@@ -23,6 +23,10 @@ import javafx.stage.Modality;
 import javafx.stage.Window;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
+import sample.Model.DBInfoAboutUser;
+import sample.Main;
+import sample.Model.LoginModel;
+import sample.Model.RegistrationModel;
 
 import java.io.IOException;
 import java.net.URL;

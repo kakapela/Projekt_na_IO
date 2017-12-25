@@ -1,4 +1,4 @@
-package sample;
+package sample.Model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +12,7 @@ public class LoginModel  {
     private LoginModel() {
 
         try {
-            connection=DBConnection.ConnectingToDB();;
+            connection= DBConnection.ConnectingToDB();;
         } catch (SQLException e) {
             e.printStackTrace();
         }

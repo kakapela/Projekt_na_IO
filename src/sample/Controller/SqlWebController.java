@@ -1,4 +1,4 @@
-package sample;
+package sample.Controller;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -12,29 +12,23 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Modality;
 import javafx.stage.Window;
+import sample.Main;
+import sample.Model.WebViewModel;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class GitWebController implements Initializable{
+public class SqlWebController implements Initializable {
     @FXML
     private AnchorPane mainPane;
 
     @FXML
     private WebView webView;
     WebViewModel webViewModel = new WebViewModel();
-    private String url_adress="https://git-scm.com/documentation";
+    private String url_adress="https://docs.oracle.com/cd/B19306_01/server.102/b14200/toc.htm";
     WebEngine engine;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        Main.fadeTrans(mainPane);
-        webViewModel.initalize(engine,webView,url_adress);
-    }
-    public void reloadPage(){
-        webViewModel.reload();
-    }
     @FXML
     void exitProgram(MouseEvent event) {
         Alert exitAlert = new Alert(Alert.AlertType.CONFIRMATION, "Confirm", ButtonType.OK, ButtonType.CANCEL);
@@ -63,4 +57,12 @@ public class GitWebController implements Initializable{
         }
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+Main.fadeTrans(mainPane);
+        webViewModel.initalize(engine,webView,url_adress);
+    }
+    public void reloadPage(){
+        webViewModel.reload();
+    }
 }

@@ -1,4 +1,4 @@
-package sample;
+package sample.Controller;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -14,6 +14,7 @@ import javafx.stage.Modality;
 import javafx.stage.Window;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
+import sample.Main;
 
 import java.io.IOException;
 import java.net.URL;

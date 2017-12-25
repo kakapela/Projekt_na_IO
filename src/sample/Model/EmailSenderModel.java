@@ -1,4 +1,4 @@
-package sample;
+package sample.Model;
 
 import javax.mail.Message;
 import javax.mail.MessagingException;
