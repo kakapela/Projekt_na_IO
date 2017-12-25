@@ -20,15 +20,17 @@ import java.util.ResourceBundle;
 public class JavaWebController implements Initializable{
     @FXML
     private AnchorPane mainPane;
+    private String url_adress="https://docs.oracle.com/javase/8/docs/";
+
 
     @FXML
     private WebView webView;
     private WebEngine engine;
+    WebViewModel webViewModel=new WebViewModel();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Main.fadeTrans(mainPane);
-        engine=webView.getEngine();
-        engine.load("https://docs.oracle.com/javase/8/docs/");
+        webViewModel.initalize(engine,webView,url_adress);
 
     }
     @FXML
@@ -59,6 +61,6 @@ public class JavaWebController implements Initializable{
         }
     }
     public void reloadPage(){
-        engine.load("https://docs.oracle.com/javase/8/docs/");
+        webViewModel.reload();
     }
 }
