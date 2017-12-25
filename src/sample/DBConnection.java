@@ -1,17 +1,28 @@
 package sample;
 
+import java.io.File;
 import java.sql.*;
 
 
 public class DBConnection {
-    private static final String JDBC_URL = "jdbc:sqlite:quiz.db"; //TUTAJ PODAJESZ PO UKOSNIKU NAZWE BAZY
+    private static final String JDBC_URL = "jdbc:sqlite:"; //TUTAJ PODAJESZ PO UKOSNIKU NAZWE BAZY
     private static final String USERNAME="root";
     private static final String PASSWORD="";
     Connection myConn;
 
     public static Connection ConnectingToDB() throws SQLException {
         Connection myConn;
-        myConn = DriverManager.getConnection(JDBC_URL);
+        File file = new File("quiz.db");
+
+
+        String sql = "CREATE TABLE IF NOT EXISTS users (\n"
+                + "	login text NOT NULL,\n"
+                + "	password text NOT NULL \n"
+                + ");";
+
+        myConn = DriverManager.getConnection(JDBC_URL+"quiz.db");
+        Statement statement=myConn.createStatement();
+        statement.execute(sql);
         return myConn;
     }
 }/*
