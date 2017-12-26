@@ -22,5 +22,8 @@
       </Label>
       <Label layoutX="103.0" layoutY="175.0" prefHeight="39.0" prefWidth="70.0" style="-fx-text-fill: white; -fx-font-size: 28px;" text="Quiz" />
       <Label layoutX="261.0" layoutY="175.0" prefHeight="40.0" prefWidth="227.0" style="-fx-text-fill: white; -fx-font-size: 28px;" text="Liczba punktów" />
+      <Label layoutX="112.0" layoutY="313.0" prefHeight="39.0" prefWidth="70.0" style="-fx-text-fill: white; -fx-font-size: 26px;" text="Git" />
+      <Label layoutX="112.0" layoutY="381.0" prefHeight="39.0" prefWidth="70.0" style="-fx-text-fill: white; -fx-font-size: 26px;" text="Java" />
+      <Label fx:id="wynik_git" layoutX="261.0" layoutY="313.0" prefHeight="40.0" prefWidth="130.0" style="-fx-text-fill: white; -fx-font-size: 26;" text="wynik" />
    </children>
 </AnchorPane>

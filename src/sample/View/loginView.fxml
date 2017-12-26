@@ -43,7 +43,7 @@
             <Font size="39.0" />
          </font>
       </JFXButton>
-      <JFXButton contentDisplay="TOP" layoutX="488.0" layoutY="196.0" prefHeight="200.0" prefWidth="285.0" styleClass="pane9" stylesheets="@../style.css" text="GIT" textFill="WHITE">
+      <JFXButton contentDisplay="TOP" layoutX="488.0" layoutY="196.0" onAction="#git" prefHeight="200.0" prefWidth="285.0" styleClass="pane9" stylesheets="@../style.css" text="GIT" textFill="WHITE">
          <graphic>
             <FontAwesomeIconView glyphName="GITHUB" size="55" styleClass="help-icon" />
          </graphic>
