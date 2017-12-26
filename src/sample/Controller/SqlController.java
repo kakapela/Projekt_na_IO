@@ -24,9 +24,20 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SqlController implements Initializable,MediaPlayerFunctions {
+public class SqlController implements Initializable{
     @FXML
     private AnchorPane mainPane;
+    @FXML
+    private JFXButton slowBtn;
+
+    @FXML
+    private JFXButton fastBtn;
+
+    @FXML
+    private JFXButton reloadBtn;
+
+    @FXML
+    private JFXButton startBtn;
 
     @FXML
     private JFXButton playpause;
@@ -60,6 +71,10 @@ public class SqlController implements Initializable,MediaPlayerFunctions {
         mediaModel.initalizeVolume(volume_down,volumeSlider,volumeMax);
         mediaModel.initalizePlayPause(playpauseIcon,playpause);
         mediaModel.initalizeTimeSlider(seekSlider);
+        mediaModel.setFast(fastBtn);
+        mediaModel.setReload(reloadBtn,playpauseIcon);
+        mediaModel.setStart(startBtn,playpauseIcon);
+        mediaModel.setSlow(slowBtn);
     }
     @FXML
     void exitProgram(MouseEvent event) {
@@ -83,29 +98,14 @@ public class SqlController implements Initializable,MediaPlayerFunctions {
         try {
             Main.fadeTrans(mainPane);
             Main.changeScene("View/PoradnikView.fxml");
-            start();
+        //TODO
+            //TODO
+            //TODO
+            //TODO
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    @Override
-    public void fast() {
-        mediaModel.fast();
-    }
 
-    @Override
-    public void slow() {
-        mediaModel.slow();
-    }
-
-    @Override
-    public void reload() {
-    mediaModel.reload(playpauseIcon);
-    }
-
-    @Override
-    public void start() {
-    mediaModel.start(playpauseIcon);
-    }
 }

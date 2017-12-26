@@ -33,38 +33,6 @@
             <FontAwesomeIconView fx:id="playpauseIcon" fill="WHITE" glyphName="PLAY" size="33" />
          </graphic>
       </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="223.0" layoutY="598.0" onMouseClicked="#slow" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
-         <font>
-            <Font size="21.0" />
-         </font>
-         <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="FAST_BACKWARD" size="33" />
-         </graphic>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="295.0" layoutY="598.0" onMouseClicked="#fast" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
-         <font>
-            <Font size="21.0" />
-         </font>
-         <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="FAST_FORWARD" size="33" />
-         </graphic>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="367.0" layoutY="598.0" onMouseClicked="#reload" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
-         <font>
-            <Font size="21.0" />
-         </font>
-         <graphic>
-            <MaterialDesignIconView fill="WHITE" glyphName="RELOAD" size="33" />
-         </graphic>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="439.0" layoutY="598.0" onMouseClicked="#start" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
-         <font>
-            <Font size="21.0" />
-         </font>
-         <graphic>
-            <MaterialDesignIconView fill="WHITE" glyphName="CLOCK_START" size="33" />
-         </graphic>
-      </JFXButton>
       <JFXSlider fx:id="volumeSlider" layoutX="705.0" layoutY="624.0" prefHeight="18.0" prefWidth="364.0" />
       <FontAwesomeIconView fx:id="volumeMax" fill="WHITE" glyphName="VOLUME_UP" layoutX="1090.0" layoutY="643.0" size="33" />
       <MaterialDesignIconView fx:id="volume_down" fill="WHITE" glyphName="VOLUME_MEDIUM" layoutX="644.0" layoutY="645.0" size="36" />
@@ -74,5 +42,37 @@
             <JFXSlider fx:id="seekSlider" blockIncrement="1.0" max="2069.0" prefHeight="28.0" prefWidth="970.0" styleClass="jfx-slider" stylesheets="@../style.css" StackPane.alignment="BOTTOM_CENTER" />
          </children>
       </StackPane>
+      <JFXButton fx:id="slowBtn" buttonType="RAISED" contentDisplay="CENTER" layoutX="223.0" layoutY="598.0" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="FAST_BACKWARD" size="33" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="fastBtn" buttonType="RAISED" contentDisplay="CENTER" layoutX="295.0" layoutY="598.0" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="FAST_FORWARD" size="33" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="reloadBtn" buttonType="RAISED" contentDisplay="CENTER" layoutX="367.0" layoutY="598.0" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="RELOAD" size="33" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="startBtn" buttonType="RAISED" contentDisplay="CENTER" layoutX="439.0" layoutY="598.0" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="CLOCK_START" size="33" />
+         </graphic>
+      </JFXButton>
    </children>
 </AnchorPane>

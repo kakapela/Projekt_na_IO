@@ -26,13 +26,24 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class JavaController implements Initializable,MediaPlayerFunctions {
+public class JavaController implements Initializable{
 
 
     @FXML
     private MediaView mv;
     private MediaPlayer mp;
     private Media me;
+    @FXML
+    private JFXButton slowBtn;
+
+    @FXML
+    private JFXButton fastBtn;
+
+    @FXML
+    private JFXButton reloadBtn;
+
+    @FXML
+    private JFXButton startBtn;
 
     @FXML
     private StackPane videoPane;
@@ -63,29 +74,14 @@ public class JavaController implements Initializable,MediaPlayerFunctions {
         mediaModel.initalizeVolume(volume_down,volumeSlider,volumeMax);
         mediaModel.initalizePlayPause(playpauseIcon,playpause);
         mediaModel.initalizeTimeSlider(seekSlider);
+        mediaModel.setFast(fastBtn);
+        mediaModel.setReload(reloadBtn,playpauseIcon);
+        mediaModel.setStart(startBtn,playpauseIcon);
+        mediaModel.setSlow(slowBtn);
 
 
     }
 
-
-    public void fast(){
-        mediaModel.fast();
-
-    }
-    public void slow(){
-        mediaModel.slow();
-
-    }
-
-
-
-    public void reload(){
-        mediaModel.reload(playpauseIcon);
-    }
-    public void start(){
-        mediaModel.start(playpauseIcon);
-
-    }
 
 
     @FXML
@@ -110,7 +106,7 @@ public class JavaController implements Initializable,MediaPlayerFunctions {
         try {
             Main.fadeTrans(mainPane);
             Main.changeScene("View/PoradnikView.fxml");
-            start();
+
         } catch (IOException e) {
             e.printStackTrace();
         }

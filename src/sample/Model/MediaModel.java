@@ -98,25 +98,43 @@ public class MediaModel {
 
 
     }
-
-
-    public void fast(){
-        mp.setRate(1.25);
-
+    public void setFast(JFXButton fastBtn){
+        fastBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                mp.setRate(1.25);
+            }
+        });
     }
-    public void slow(){
-        mp.setRate(.75);
+    public void setSlow(JFXButton slowBtn){
+        slowBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                mp.setRate(.75);
+            }
+        });
+    }
 
+    public void setReload(JFXButton reloadBtn,FontAwesomeIconView playpauseIcon){
+        reloadBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                mp.seek(mp.getStartTime());
+                mp.play();
+                playpauseIcon.setGlyphName("PAUSE_CIRCLE");
+            }
+        });
     }
-    public void reload(FontAwesomeIconView playpauseIcon){
-        mp.seek(mp.getStartTime());
-        mp.play();
-        playpauseIcon.setGlyphName("PAUSE_CIRCLE");
+    public void setStart(JFXButton startBtn,FontAwesomeIconView playpauseIcon){
+        startBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                mp.seek(mp.getStartTime());
+                mp.play();
+                playpauseIcon.setGlyphName("PLAY");
+            }
+        });
     }
-    public void start(FontAwesomeIconView playpauseIcon){
-        mp.seek(mp.getStartTime());
-        mp.stop();
-        playpauseIcon.setGlyphName("PLAY");
 
-    }
+
 }

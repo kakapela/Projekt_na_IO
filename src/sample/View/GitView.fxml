@@ -33,7 +33,7 @@
             <FontAwesomeIconView fx:id="playpauseIcon" fill="WHITE" glyphName="PLAY" size="33" />
          </graphic>
       </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="223.0" layoutY="598.0" onMouseClicked="#slow" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
+      <JFXButton fx:id="slowBtn" buttonType="RAISED" contentDisplay="CENTER" layoutX="223.0" layoutY="598.0" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
          <font>
             <Font size="21.0" />
          </font>
@@ -41,7 +41,7 @@
             <FontAwesomeIconView fill="WHITE" glyphName="FAST_BACKWARD" size="33" />
          </graphic>
       </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="295.0" layoutY="598.0" onMouseClicked="#fast" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
+      <JFXButton fx:id="fastBtn" buttonType="RAISED" contentDisplay="CENTER" layoutX="295.0" layoutY="598.0" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
          <font>
             <Font size="21.0" />
          </font>
@@ -49,7 +49,7 @@
             <FontAwesomeIconView fill="WHITE" glyphName="FAST_FORWARD" size="33" />
          </graphic>
       </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="367.0" layoutY="598.0" onMouseClicked="#reload" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
+      <JFXButton fx:id="reloadBtn" buttonType="RAISED" contentDisplay="CENTER" layoutX="367.0" layoutY="598.0" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
          <font>
             <Font size="21.0" />
          </font>
@@ -57,7 +57,7 @@
             <MaterialDesignIconView fill="WHITE" glyphName="RELOAD" size="33" />
          </graphic>
       </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="439.0" layoutY="598.0" onMouseClicked="#start" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
+      <JFXButton fx:id="startBtn" buttonType="RAISED" contentDisplay="CENTER" layoutX="439.0" layoutY="598.0" prefHeight="52.0" prefWidth="72.0" styleClass="confirmButton" stylesheets="@../style.css" textFill="#dad6d6">
          <font>
             <Font size="21.0" />
          </font>
