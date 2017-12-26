@@ -75,4 +75,8 @@ public class loginController implements Initializable {
 
         Main.changeScene("View/SqlQuizView.fxml");
     }
+    public void RESULT() throws IOException {
+
+        Main.changeScene("View/ResultView.fxml");
+    }
 }

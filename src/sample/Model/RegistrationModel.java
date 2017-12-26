@@ -20,7 +20,7 @@ public class RegistrationModel {
             //Statement stmt=connection.createStatement();
 
 
-            PreparedStatement stmt = connection.prepareStatement("INSERT INTO USERS (login,password) VALUES (?, ?)");
+            PreparedStatement stmt = connection.prepareStatement("INSERT INTO USERS VALUES (?, ?,0,0,0)");
 
             stmt.setString(1, userr);
             stmt.setString(2, pass);

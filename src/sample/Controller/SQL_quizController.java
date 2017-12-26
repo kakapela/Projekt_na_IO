@@ -15,9 +15,14 @@ import javafx.stage.Window;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
 import sample.Main;
+import sample.Model.DBConnection;
+import sample.Model.DBInfoAboutUser;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class SQL_quizController implements Initializable{
@@ -125,8 +130,23 @@ public class SQL_quizController implements Initializable{
         {
             punkty++;
         }
-        System.out.println(punkty);
+        Connection connection = null;
+        try {
+            connection= DBConnection.ConnectingToDB();;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        DBInfoAboutUser currentUser=DBInfoAboutUser.getInstance();
 
+        try {
+            PreparedStatement stmt = connection.prepareStatement("UPDATE USERS SET wynik_sql =? WHERE login=?");
+            stmt.setInt(1, punkty);
+            stmt.setString(2, currentUser.getCurrentUser());
+            stmt.executeUpdate();
+            stmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
 
 
@@ -140,10 +160,11 @@ public class SQL_quizController implements Initializable{
         notificationBuilder.darkStyle();
         notificationBuilder.show();
         try {
-            Main.changeScene("loginView.fxml");
+            Main.changeScene("View/loginView.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         punkty=0;
 
     }
