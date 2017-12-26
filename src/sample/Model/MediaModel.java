@@ -19,8 +19,14 @@ import java.io.File;
 
 abstract public class MediaModel {
 
-
-    public void execute(){
+    /*
+    KORZYSTAMY TUTAJ Z METODY SZABLONOWEJ
+    TWORZYMY WZORZEC NA BUDOWE ODTWARZACZA WIDEO
+    WSZYSTKIE FUNKCJE SĄ ABSTRACT PROTECTED A WIEC SA IMPLEMENTOWANE W KONKRETNEJ KLASIE KTORA DZIEDZICZY PO TYM WZORCU
+    FUNKCJE SĄ DOSTĘPNE NA ZEWNĄTRZ JEDYNIE POPRZEZ JEDNĄ FUNKCJE KTORA WYWOLUJE WSZYSTKIE POZOSTALE
+    POTRZEBNE DO ZBUDOWANIA ODTWARZACZA
+*/
+    public void createMediaPlayer(){
         initalizeMovie();
         initalizeVolume();
         initalizePlayPause();
@@ -34,7 +40,6 @@ abstract public class MediaModel {
 
     abstract protected void initalizeMovie();
    abstract protected void initalizeVolume();
-    boolean isPlaying=false;
    abstract protected void initalizePlayPause();
     abstract protected void initalizeTimeSlider();
     abstract protected void setFast();

@@ -71,7 +71,7 @@
       <StackPane fx:id="videoPane" layoutX="151.0" layoutY="33.0" prefHeight="550.0" prefWidth="970.0">
          <children>
             <MediaView fx:id="mv" fitHeight="550.0" fitWidth="970.0" />
-            <JFXSlider fx:id="seekSlider" blockIncrement="1.0" max="2069.0" prefHeight="28.0" prefWidth="970.0" styleClass="jfx-slider" stylesheets="@../style.css" StackPane.alignment="BOTTOM_CENTER" />
+            <JFXSlider fx:id="seekSlider" blockIncrement="1.0" max="1961.0" prefHeight="28.0" prefWidth="970.0" styleClass="jfx-slider" stylesheets="@../style.css" StackPane.alignment="BOTTOM_CENTER" />
          </children>
       </StackPane>
    </children>

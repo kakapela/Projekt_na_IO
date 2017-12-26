@@ -45,7 +45,7 @@ abstract public class Query {
 
     }
 
-    public void execute(String login, String haslo) {
+    public void createMediaPlayer(String login, String haslo) {
         try {
             connectToDatabase();
             executeSql(login,haslo);
@@ -67,7 +67,7 @@ abstract public class Query {
 
     private void close() throws SQLException {
         resultSet.close();
-        myStmt.execute("SHUTDOWN");
+        myStmt.createMediaPlayer("SHUTDOWN");
         myStmt.close();
         myConn.close();
     }

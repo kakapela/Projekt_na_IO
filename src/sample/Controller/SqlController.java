@@ -26,7 +26,6 @@ import javafx.stage.Window;
 import javafx.util.Duration;
 import sample.Main;
 import sample.Model.MediaModel;
-import sample.Model.MediaPlayerFunctions;
 
 import java.io.File;
 import java.io.IOException;
@@ -75,12 +74,12 @@ public class SqlController extends MediaModel implements Initializable{
 
     @FXML
     private JFXSlider seekSlider;
-    //MediaModel mediaModel= new MediaModel();
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Main.fadeTrans(mainPane);
-        execute();
+        createMediaPlayer();
 
     }
     @FXML
@@ -106,8 +105,8 @@ public class SqlController extends MediaModel implements Initializable{
             Main.fadeTrans(mainPane);
             Main.changeScene("View/PoradnikView.fxml");
             mp.seek(mp.getStartTime());
-            mp.play();
-            playpauseIcon.setGlyphName("PLAY");
+            mp.stop();
+            playpauseIcon.setGlyphName("PAUSE");
             //TODO
         } catch (IOException e) {
             e.printStackTrace();
@@ -226,7 +225,7 @@ public class SqlController extends MediaModel implements Initializable{
             @Override
             public void handle(MouseEvent event) {
                 mp.seek(mp.getStartTime());
-                mp.play();
+                mp.stop();
                 playpauseIcon.setGlyphName("PLAY");
             }
         });

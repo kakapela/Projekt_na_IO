@@ -26,7 +26,6 @@ import javafx.stage.Window;
 import javafx.util.Duration;
 import sample.Main;
 import sample.Model.MediaModel;
-import sample.Model.MediaPlayerFunctions;
 
 import java.io.File;
 import java.io.IOException;
@@ -73,15 +72,16 @@ public class GitController extends MediaModel implements Initializable{
     Media me;
     boolean isPlaying=false;
 
+
     @FXML
     private JFXSlider seekSlider;
-    //MediaModel mediaModel= new MediaModel();
+
     private String pathToTheMovie="videos/GitTutorial.mp4";
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Main.fadeTrans(mainPane);
-        execute();
+        createMediaPlayer();
 
     }
     @FXML
@@ -107,7 +107,7 @@ public class GitController extends MediaModel implements Initializable{
             Main.fadeTrans(mainPane);
             Main.changeScene("View/PoradnikView.fxml");
             mp.seek(mp.getStartTime());
-            mp.play();
+            mp.stop();
             playpauseIcon.setGlyphName("PLAY");
         } catch (IOException e) {
             e.printStackTrace();
@@ -216,7 +216,7 @@ public class GitController extends MediaModel implements Initializable{
             public void handle(MouseEvent event) {
                 mp.seek(mp.getStartTime());
                 mp.play();
-                playpauseIcon.setGlyphName("PAUSE_CIRCLE");
+                playpauseIcon.setGlyphName("PAUSE");
             }
         });
     }
@@ -228,7 +228,7 @@ public class GitController extends MediaModel implements Initializable{
             @Override
             public void handle(MouseEvent event) {
                 mp.seek(mp.getStartTime());
-                mp.play();
+                mp.stop();
                 playpauseIcon.setGlyphName("PLAY");
             }
         });
