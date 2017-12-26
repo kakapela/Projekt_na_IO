@@ -17,8 +17,10 @@ import org.controlsfx.control.Notifications;
 import sample.Main;
 import sample.Model.DBConnection;
 import sample.Model.DBInfoAboutUser;
+import sample.Model.GitquizModel;
 import sample.Model.SQLquizModel;
 
+import java.awt.image.SampleModel;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -26,7 +28,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class SQL_quizController implements Initializable{
+public class Git_quizController implements Initializable {
 
     @FXML
     private AnchorPane mainPane;
@@ -76,6 +78,75 @@ public class SQL_quizController implements Initializable{
     @FXML
     private Button wyslij;
 
+
+    int punkty=0;
+    @FXML
+    private void quiz_Git()
+    {
+        if (ODPC1.isSelected())
+        {
+            punkty++;
+        }
+        if (ODPA2.isSelected())
+        {
+            punkty++;
+        }
+        if (ODPD3.isSelected())
+        {
+            punkty++;
+        }
+        if (ODPB4.isSelected())
+        {
+            punkty++;
+        }
+        if (ODPB5.isSelected())
+        {
+            punkty++;
+        }
+
+        GitquizModel.connectDB(punkty);
+
+
+
+
+       /* Connection connection = null;
+        try {
+            connection= DBConnection.ConnectingToDB();;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        DBInfoAboutUser currentUser=DBInfoAboutUser.getInstance();
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement("UPDATE USERS SET wynik_git =? WHERE login=?");
+            stmt.setInt(1, punkty);
+            stmt.setString(2, currentUser.getCurrentUser());
+            stmt.executeUpdate();
+            stmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+       }*/
+
+
+
+        Image img=new Image("sample/images/tick.png");
+        Notifications notificationBuilder = Notifications.create()
+                .title("Skończyłeś quiz")
+                .text("Liczba punktów: " + punkty)
+                .graphic(new ImageView(img))
+                .hideAfter(Duration.seconds(5))
+                .position(Pos.BOTTOM_RIGHT);
+        notificationBuilder.darkStyle();
+        notificationBuilder.show();
+        try {
+            Main.changeScene("View/loginView.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        punkty=0;
+
+    }
     @FXML
     void exitProgram(MouseEvent event) {
         Alert exitAlert = new Alert(Alert.AlertType.CONFIRMATION, "Confirm", ButtonType.OK, ButtonType.CANCEL);
@@ -102,66 +173,9 @@ public class SQL_quizController implements Initializable{
             e.printStackTrace();
         }
     }
-
-
-
-
-
-    int punkty=0;
-    @FXML
-    private void quiz_SQL()
-    {
-        if (ODPC1.isSelected())
-        {
-            punkty++;
-        }
-        if (ODPC2.isSelected())
-        {
-            punkty++;
-        }
-        if (ODPD3.isSelected())
-        {
-            punkty++;
-        }
-        if (ODPA4.isSelected())
-        {
-            punkty++;
-        }
-        if (ODPB5.isSelected())
-        {
-            punkty++;
-        }
-
-
-        SQLquizModel.connectDB(punkty);
-
-        Image img=new Image("sample/images/tick.png");
-        Notifications notificationBuilder = Notifications.create()
-                .title("Skończyłeś quiz")
-                .text("Liczba punktów: " + punkty)
-                .graphic(new ImageView(img))
-                .hideAfter(Duration.seconds(5))
-                .position(Pos.BOTTOM_RIGHT);
-        notificationBuilder.darkStyle();
-        notificationBuilder.show();
-        try {
-            Main.changeScene("View/loginView.fxml");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        punkty=0;
-
-    }
-
-
-
-
-
     @Override
-    public void initialize(URL location, ResourceBundle resources){
-
-            Main.fadeTrans(mainPane);
+    public void initialize(URL location, ResourceBundle resources) {
+        Main.fadeTrans(mainPane);
         final ToggleGroup pytanie1 = new ToggleGroup();
         final ToggleGroup pytanie2 = new ToggleGroup();
         final ToggleGroup pytanie3 = new ToggleGroup();
@@ -198,10 +212,6 @@ public class SQL_quizController implements Initializable{
         ODPB5.setToggleGroup(pytanie5);
         ODPC5.setToggleGroup(pytanie5);
         ODPD5.setToggleGroup(pytanie5);
-
-
-
-
 
 
     }

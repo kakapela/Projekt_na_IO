@@ -79,4 +79,8 @@ public class loginController implements Initializable {
 
         Main.changeScene("View/ResultView.fxml");
     }
+    public void git() throws IOException {
+
+        Main.changeScene("View/GitQuizView.fxml");
+    }
 }

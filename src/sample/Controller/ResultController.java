@@ -6,12 +6,27 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
+import javafx.stage.Window;
+import sample.Main;
+
+
+import javafx.application.Platform;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Window;
 import sample.Main;
 import sample.Model.DBConnection;
 import sample.Model.DBInfoAboutUser;
+import sample.Model.ResultModel;
+import sample.Model.SQLquizModel;
 
 import java.awt.*;
 import java.io.IOException;
@@ -25,14 +40,13 @@ import java.util.ResourceBundle;
 public class ResultController implements Initializable {
 
     @FXML
-    private javafx.scene.control.Label test;
+    public javafx.scene.control.Label test;
 
     @FXML
     public void goBackk(){
 
-
         try {
-            //Main.fadeTrans(mainPane);
+//Main.fadeTrans(mainPane);
             Main.changeScene("View/loginView.fxml");
         } catch (IOException e) {
             e.printStackTrace();
@@ -54,9 +68,20 @@ public class ResultController implements Initializable {
         }
     }
 
-    DBInfoAboutUser currentUser=DBInfoAboutUser.getInstance();
+    public void changeResult(ResultSet resultSet){
+        test.setText("kkkk");
+        System.out.println("test");
+
+    }
+
+
     @Override
-   public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL location, ResourceBundle resources) {
+        ResultModel.ConnectDB(test);
+
+        //test.setText("glut");
+        /*
+        DBInfoAboutUser currentUser=DBInfoAboutUser.getInstance();
         Connection connection = null;
         try {
             connection = DBConnection.ConnectingToDB();
@@ -67,6 +92,7 @@ public class ResultController implements Initializable {
         PreparedStatement preparedStatement=null;
         ResultSet resultSet=null;
         String query = "SELECT wynik_sql FROM users WHERE login = ?";
+
         try {
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, currentUser.getCurrentUser());
@@ -91,9 +117,6 @@ public class ResultController implements Initializable {
             }
 
         }
-    }
-
-
+    */}
 
 }
-
