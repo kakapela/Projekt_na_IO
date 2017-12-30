@@ -43,6 +43,11 @@ public class ResultController implements Initializable {
     public javafx.scene.control.Label test;
 
     @FXML
+    public javafx.scene.control.Label wynik_git;
+    @FXML
+    public javafx.scene.control.Label wynik_java;
+
+    @FXML
     public void goBackk(){
 
         try {
@@ -78,6 +83,8 @@ public class ResultController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ResultModel.ConnectDB(test);
+        ResultModel.ConnectDB2(wynik_git);
+        ResultModel.ConnectDB3(wynik_java);
 
         //test.setText("glut");
         /*
