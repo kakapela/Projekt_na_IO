@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1260.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.PoradnikController">
+   <children>
+      <Label layoutX="45.0" layoutY="27.0" text="Nie radzisz sobie z quizem? Chcesz się podszkolić?" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="92.0" text="Skorzystaj z naszych poradników!" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="1097.0" layoutY="156.0" onMouseClicked="#exitProgram" styleClass="exitButton" stylesheets="@../style.css" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="CENTER" layoutX="1097.0" layoutY="6.0" onMouseClicked="#goBackk" prefHeight="76.0" prefWidth="82.0" styleClass="buttonGoBack" stylesheets="@../style.css" textFill="WHITE">
+         <graphic>
+            <OctIconView fill="WHITE" glyphName="MAIL_REPLY" onMouseClicked="#goBackk" size="40" styleClass="buttonGoBack" />
+         </graphic>
+         <font>
+            <Font size="39.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="CENTER" layoutX="1179.0" layoutY="6.0" onMouseClicked="#exitProgram" prefHeight="82.0" prefWidth="82.0" styleClass="exitButton2" stylesheets="@../style.css" text="X" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="101.0" layoutY="226.0" onAction="#javaMovie" prefHeight="200.0" prefWidth="285.0" styleClass="pane7" stylesheets="@../style.css" text="JAVA" textFill="WHITE">
+         <font>
+            <Font size="39.0" />
+         </font>
+         <graphic>
+            <OctIconView fill="WHITE" glyphName="ORGANIZATION" size="55" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="474.0" layoutY="226.0" onMouseClicked="#sqlMovie" prefHeight="200.0" prefWidth="285.0" styleClass="pane8" stylesheets="@../style.css" text="SQL" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView glyphName="DATABASE" size="55" styleClass="help-icon" />
+         </graphic>
+         <font>
+            <Font size="39.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="860.0" layoutY="226.0" onMouseClicked="#gitMovie" prefHeight="200.0" prefWidth="285.0" styleClass="pane9" stylesheets="@../style.css" text="GIT" textFill="WHITE">
+         <font>
+            <Font size="39.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="GITHUB" size="55" styleClass="help-icon" />
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="101.0" layoutY="458.0" onMouseClicked="#goToJavaSite" prefHeight="57.0" prefWidth="285.0" styleClass="pane7" stylesheets="@../style.css" text="Strona o JAVIE" textFill="#dad6d6">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="474.0" layoutY="458.0" onMouseClicked="#goToSqlSite" prefHeight="57.0" prefWidth="285.0" styleClass="pane8" stylesheets="@../style.css" text="Strona o SQL" textFill="#dad6d6">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="860.0" layoutY="458.0" onMouseClicked="#goToGitSite" prefHeight="57.0" prefWidth="285.0" styleClass="pane9" stylesheets="@../style.css" text="Strona o GIT" textFill="#dad6d6">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="198.0" layoutY="624.0" text="Odwiedź polecane przez nas strony lub wybierz jeden z video tutoriali!" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

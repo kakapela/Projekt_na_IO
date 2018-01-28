@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1276.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Java_quizController">
+   <children>
+      <ScrollPane layoutX="-3.0" prefHeight="719.0" prefWidth="1279.0">
+         <content>
+            <AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1260.0" style="-fx-background-color: black;">
+               <children>
+                  <RadioButton fx:id="ODPA1" layoutX="36.0" layoutY="145.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="super.nameMethod()" />
+                  <RadioButton fx:id="ODPB1" layoutX="36.0" layoutY="200.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="this.selfMethod()" />
+                  <RadioButton fx:id="ODPC1" layoutX="36.0" layoutY="255.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="self.nameMethod()" />
+                  <RadioButton fx:id="ODPD1" layoutX="36.0" layoutY="310.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="override.nameMethod()" />
+                  <Label layoutX="36.0" layoutY="422.0" prefHeight="30.0" prefWidth="754.0" style="-fx-font-size: 25; -fx-text-fill: white;" styleClass="whitecolor" stylesheets="@../style.css" text="Jaka jest różnica pomiędzy Set a List?" />
+                  <RadioButton fx:id="ODPA2" layoutX="36.0" layoutY="499.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="List zawiera elementy posortowane a Set ich nie sortuje" />
+                  <RadioButton fx:id="ODPB2" layoutX="36.0" layoutY="555.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="List może zawierać duplikaty, Set nie zawiera duplikatów" />
+                  <RadioButton fx:id="ODPC2" layoutX="36.0" layoutY="610.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Nie ma znaczącej różnicy, kwestia jaka jest implementacja" />
+                  <RadioButton fx:id="ODPD2" layoutX="36.0" layoutY="665.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Set jest dużo szybszy" />
+                  <Label layoutX="36.0" layoutY="781.0" style="-fx-font-size: 25; -fx-text-fill: white;" text="Jakiej metody NIE zawiera klasa Object?" />
+                  <Label layoutX="36.0" layoutY="40.0" style="-fx-text-fill: white;" text="Pytanie 1/5" />
+                  <Label layoutX="36.0" layoutY="380.0" style="-fx-text-fill: white;" text="Pytanie 2/5" />
+                  <RadioButton fx:id="ODPA3" layoutX="36.0" layoutY="855.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="toString" />
+                  <RadioButton fx:id="ODPB3" layoutX="36.0" layoutY="910.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="wait" />
+                  <RadioButton fx:id="ODPC3" layoutX="36.0" layoutY="965.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="toHashCode" />
+                  <RadioButton fx:id="ODPD3" layoutX="36.0" layoutY="1020.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="equals" />
+                  <Label layoutX="36.0" layoutY="740.0" style="-fx-text-fill: white;" text="Pytanie 3/5" />
+                  <Label layoutX="36.0" layoutY="1100.0" style="-fx-text-fill: white;" text="Pytanie 4/5" />
+                  <Label layoutX="36.0" layoutY="1150.0" style="-fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white; -fx-font-size: 25;" text="Do czego służy metoda equals?" />
+                  <RadioButton fx:id="ODPA4" layoutX="36.0" layoutY="1215.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Do porównania czy obiekty są takie same poprzez porównanie ich wskaźników" />
+                  <RadioButton fx:id="ODPB4" layoutX="36.0" layoutY="1270.0" mnemonicParsing="false" style="-fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white;" text="Do porównania czy obiekty są takie same poprzez porównanie ich hashCode" />
+                  <RadioButton fx:id="ODPC4" layoutX="36.0" layoutY="1325.0" mnemonicParsing="false" style="-fx-text-fill: white; -fx-text-fill: white;" text="Do porównania liczb" />
+                  <RadioButton fx:id="ODPD4" layoutX="36.0" layoutY="1380.0" mnemonicParsing="false" style="-fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white;" text="W zależności od implementacji w danej klasie są porównywane dane które jednoznacznie mogą określić czy obiekty są równe" />
+                  <RadioButton fx:id="ODPD5" layoutX="36.0" layoutY="1759.0" mnemonicParsing="false" style="-fx-text-fill: white;" text=" Posiadającą metodę getNazwa i setNazwa" />
+                  <Label layoutX="36.0" layoutY="1470.0" style="-fx-text-fill: white; -fx-text-fill: white;" text="Pytanie 5/5" />
+                  <Label layoutX="36.0" layoutY="1500.0" prefHeight="92.0" prefWidth="1008.0" style="-fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white; -fx-font-size: 25;" text="Jaką zmienną nazywamy field (pole)?" />
+                  <RadioButton fx:id="ODPC5" layoutX="36.0" layoutY="1710.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Zdefiniowaną w dowolnym bloku kodu" />
+                  <RadioButton fx:id="ODPA5" layoutX="36.0" layoutY="1600.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Zmienną typu Integer" />
+                  <RadioButton fx:id="ODPB5" layoutX="36.0" layoutY="1655.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Zdefiniowaną w klasie" />
+                  <Label layoutX="36.0" layoutY="50.0" prefHeight="80.0" prefWidth="902.0" style="-fx-font-size: 25; -fx-text-fill: white;" text="Jak wywołać metodę w klasie podrzędnej z klasy nadrzędnej?" />
+                  <JFXButton contentDisplay="CENTER" layoutX="1086.0" onMouseClicked="#goBackk" prefHeight="70.0" prefWidth="82.0" styleClass="buttonGoBack" stylesheets="@../style.css" textFill="WHITE">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton contentDisplay="CENTER" layoutX="1153.0" layoutY="-8.0" onMouseClicked="#exitProgram" prefHeight="82.0" prefWidth="82.0" styleClass="exitButton2" stylesheets="@../style.css" text="X" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="418.0" layoutY="1854.0" onAction="#quiz_Java" prefHeight="52.0" prefWidth="397.0" styleClass="confirmButton" stylesheets="@../style.css" text="Zatwierdź" textFill="#dad6d6">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </JFXButton>
+                  <OctIconView fill="WHITE" glyphName="MAIL_REPLY" layoutX="1112.0" layoutY="41.0" size="40" styleClass="buttonGoBack" text="" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

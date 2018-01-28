@@ -1,15 +1,135 @@
 .background {
-    -fx-background-image: url("background.jpg");
+    -fx-background-image: url("images/background.jpg");
     -fx-background-repeat: stretch;
-    -fx-background-size: 1024 682;
+    -fx-background-size: 1024 719;
     -fx-background-position: center center;
 }
 .jfx-hamburger StackPane { -fx-background-color: white; }
 
 .sideMenu{
-    -fx-background-image: url("background.jpg");
+    -fx-background-image: url("images/background.jpg");
     -fx-background-repeat: stretch;
     -fx-background-size: 342 251;
     -fx-background-position: center center;
 
+}
+.backIcon{
+    -fx-fill: white;
+}
+.backIcon:hover{
+    -fx-fill: white;
+}
+.buttonGoBack:hover
+{
+    -fx-fill: red;
+    -fx-text-fill: red;
+    -fx-background-color: red;
+}
+.exitButton2:hover{
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-fill: red;
+
+}
+.jfx-slider .thumb{
+    -fx-background-color:blue;
+
+}
+
+.exitButton2{
+
+    -fx-text-fill: white;
+    -fx-fill: white;
+
+}
+.buttonGoBack:hover .backIcon{
+    -fx-fill: red;
+    -fx-text-fill: red;
+    -fx-background-color: red;
+}
+.pane1 {
+
+    -fx-background-color:lime;
+}
+.pane1:hover{
+
+    -fx-background-color:#00dd00;
+}
+.pane2 {
+
+    -fx-background-color:indigo;
+}
+.pane2:hover {
+
+    -fx-background-color: #3a0071;
+}
+.confirmButton{
+    -fx-background-color:  #E45652;
+
+}
+.confirmButton:hover{
+    -fx-background-color:  #D34541;
+
+}
+.exitButton:hover{
+    -fx-text-fill: red;
+}
+.pane3 {
+
+    -fx-background-color:#FF1493;
+}
+.pane3:hover{
+
+    -fx-background-color:#DD0382;
+}
+
+.pane4 {
+
+    -fx-background-color:	#DA680F;
+}
+.pane4:hover{
+
+    -fx-background-color:#CA570D;
+}
+
+.pane5 {
+
+    -fx-background-color:#dd0000;
+}
+.pane5:hover{
+
+    -fx-background-color:#cc0000;
+}
+.pane6 {
+
+    -fx-background-color:#6699CC;
+    -fx-text-fill: white;
+}
+.pane6:hover {
+
+    -fx-background-color:#5588BB;
+}
+
+.pane7 {
+    -fx-background-color:#7C1C05	;
+
+}
+.pane7:hover {
+    -fx-background-color: #6B0B04;
+}
+.help-icon {
+    -fx-fill: white;
+}
+.pane8 {
+    -fx-background-color: 	#00468C		;
+
+}
+.pane8:hover {
+    -fx-background-color: #00357B;
+}
+.pane9 {
+    -fx-background-color: #2F7532	;
+}
+.pane9:hover {
+    -fx-background-color: #1D6421;
 }

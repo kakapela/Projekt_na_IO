@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1260.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Git_quizController">
+   <children>
+      <ScrollPane layoutX="-3.0" prefHeight="719.0" prefWidth="1279.0">
+         <content>
+            <AnchorPane fx:id="mainPane" prefHeight="1912.0" prefWidth="1260.0" style="-fx-background-color: black;">
+               <children>
+                  <RadioButton fx:id="ODPA1" layoutX="36.0" layoutY="145.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Merge" />
+                  <RadioButton fx:id="ODPB1" layoutX="36.0" layoutY="200.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Init" />
+                  <RadioButton fx:id="ODPC1" layoutX="36.0" layoutY="262.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Checkout" />
+                  <RadioButton fx:id="ODPD1" layoutX="36.0" layoutY="320.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Add" />
+                  <Label layoutX="36.0" layoutY="425.0" prefHeight="30.0" prefWidth="754.0" style="-fx-font-size: 25; -fx-text-fill: white;" styleClass="whitecolor" stylesheets="@../style.css" text="Jakie polecenie służy do scalania dwóch branchy" />
+                  <RadioButton fx:id="ODPA2" layoutX="36.0" layoutY="499.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Merge" />
+                  <RadioButton fx:id="ODPB2" layoutX="36.0" layoutY="555.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Init" />
+                  <RadioButton fx:id="ODPC2" layoutX="36.0" layoutY="610.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Checkout" />
+                  <RadioButton fx:id="ODPD2" layoutX="36.0" layoutY="665.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Add" />
+                  <Label layoutX="36.0" layoutY="781.0" style="-fx-font-size: 25; -fx-text-fill: white;" text="Jakim systemem jest Git?" />
+                  <Label layoutX="36.0" layoutY="41.0" style="-fx-text-fill: white;" text="Pytanie 1/5" />
+                  <Label layoutX="36.0" layoutY="387.0" style="-fx-text-fill: white;" text="Pytanie 2/5" />
+                  <RadioButton fx:id="ODPA3" layoutX="36.0" layoutY="860.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Sekwencyjnym" />
+                  <RadioButton fx:id="ODPB3" layoutX="36.0" layoutY="920.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Scentralizowanym" />
+                  <RadioButton fx:id="ODPC3" layoutX="36.0" layoutY="975.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Lokalnym" />
+                  <RadioButton fx:id="ODPD3" layoutX="36.0" layoutY="1030.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Rozproszonym" />
+                  <Label layoutX="36.0" layoutY="740.0" style="-fx-text-fill: white;" text="Pytanie 3/5" />
+                  <Label layoutX="36.0" layoutY="1113.0" style="-fx-text-fill: white;" text="Pytanie 4/5" />
+                  <Label layoutX="36.0" layoutY="1170.0" style="-fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white; -fx-font-size: 25;" text="Które z tych poleceń wykonywane zapisuje zmiany lokalnie?" />
+                  <RadioButton fx:id="ODPA4" layoutX="36.0" layoutY="1240.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Push" />
+                  <RadioButton fx:id="ODPB4" layoutX="36.0" layoutY="1300.0" mnemonicParsing="false" style="-fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white;" text="Commit" />
+                  <RadioButton fx:id="ODPC4" layoutX="36.0" layoutY="1355.0" mnemonicParsing="false" style="-fx-text-fill: white; -fx-text-fill: white;" text="Pull" />
+                  <RadioButton fx:id="ODPD4" layoutX="36.0" layoutY="1410.0" mnemonicParsing="false" style="-fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white;" text="Fetch" />
+                  <RadioButton fx:id="ODPD5" layoutX="36.0" layoutY="1775.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Repozytorium stanie się prywatne" />
+                  <Label layoutX="36.0" layoutY="1484.0" style="-fx-text-fill: white; -fx-text-fill: white;" text="Pytanie 5/5" />
+                  <Label layoutX="36.0" layoutY="1510.0" prefHeight="92.0" prefWidth="1008.0" style="-fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white; -fx-text-fill: white; -fx-font-size: 25;" text="Co się wydarzy po wykonaniu polecenia git fetch?" />
+                  <RadioButton fx:id="ODPC5" layoutX="36.0" layoutY="1720.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Zostaną wysłane na serwer zmiany z lokalnego repozytorium" />
+                  <RadioButton fx:id="ODPA5" layoutX="36.0" layoutY="1610.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Repozytorium zostanie usunięte" />
+                  <RadioButton fx:id="ODPB5" layoutX="36.0" layoutY="1665.0" mnemonicParsing="false" style="-fx-text-fill: white;" text="Zostaną pobrane z serwera zmiany do lokalnego repozytorium" />
+                  <Label layoutX="36.0" layoutY="51.0" prefHeight="80.0" prefWidth="902.0" style="-fx-font-size: 25; -fx-text-fill: white;" text="Jakie polecenie służy do przełączania pomiędzy branchami?" />
+                  <JFXButton contentDisplay="CENTER" layoutX="1086.0" onMouseClicked="#goBackk" prefHeight="70.0" prefWidth="82.0" styleClass="buttonGoBack" stylesheets="@../style.css" textFill="WHITE">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton contentDisplay="CENTER" layoutX="1153.0" layoutY="-8.0" onMouseClicked="#exitProgram" prefHeight="82.0" prefWidth="82.0" styleClass="exitButton2" stylesheets="@../style.css" text="X" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="418.0" layoutY="1854.0" onAction="#quiz_Git" prefHeight="52.0" prefWidth="397.0" styleClass="confirmButton" stylesheets="@../style.css" text="Zatwierdź" textFill="#dad6d6">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </JFXButton>
+                  <OctIconView fill="WHITE" glyphName="MAIL_REPLY" layoutX="1112.0" layoutY="41.0" size="40" styleClass="buttonGoBack" text="" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
