@@ -1,5 +1,6 @@
 #  Aplikacja QuizyIT
 
+### Uczestnicy projektu: Kapela Kacper, Daniel Talar
 ---
 ### Aplikacja napisana za pomocą technologii JavaFX. 
 #### Podstawowe funkcjonalności jakie posiada aplikacja: 
@@ -14,6 +15,12 @@
 -kontakt z autorem programu za pomocą funkcji wysyłania maila z poziomu aplikacji
 
 -możliwość założenia własnego konta
+
+-architektura MVC
+
+-wykorzystanie dwóch wzorców projektowych: Template Method, Singleton
+
+-zapis/odczyt wyników realizowany za pomocą bazy danych SQLite
 
 ---
 ### Użyte technologie oraz biblioteki:
